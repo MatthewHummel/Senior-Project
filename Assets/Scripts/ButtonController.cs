@@ -9,6 +9,9 @@ public class ButtonController : MonoBehaviour
     public TMPro.TextMeshProUGUI displayText;
     public TMPro.TextMeshProUGUI diceText;
     public TMPro.TextMeshProUGUI displayLast;
+    public TMPro.TMP_InputField InputField;
+
+
 
 
     private void Start()
@@ -76,7 +79,15 @@ public class ButtonController : MonoBehaviour
             displayText.text = "Text file does not exist.";
         }
     }
-    
+
+    //When send button is clicked, take input field data and append to text file
+    public void OnSendButtonClicked()
+    {
+        string inputData = InputField.text;
+        File.AppendAllText(filePath, "User Input: " + inputData + "\n");
+    }
+
+
     //Direction methods
     public void OnUpButtonClicked()
     {

@@ -10,7 +10,7 @@ public class MenuController : MonoBehaviour
     [Header("Voulme Setting")]
     [SerializeField] private TMP_Text volumeTextValue = null;
     [SerializeField] private Slider volumeSlider = null;
-    [SerializeField] private float defaultVolume = 1.0f; 
+    [SerializeField] private float defaultVolume = 5.0f; 
 
     public string firstlevel;
 

@@ -288,3 +288,12 @@ Move up
 Dice Roll: 7
 Egg
 User Input: Egg
+Dice Roll: 16
+Dice Roll: 9
+Dice Roll: 11
+Move right
+Move up
+Move left
+Move down
+User Input: 
+Move up

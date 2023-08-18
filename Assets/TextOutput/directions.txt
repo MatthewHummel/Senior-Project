@@ -1,0 +1,233 @@
+Dice: 13
+Dice: 8
+Dice: 8
+Dice: 17
+Dice: 3
+Dice: 8
+Dice: 6
+Dice: 9
+Dice: 5
+Dice: 4
+Dice: 11
+Dice: 2
+Dice: 9
+Dice: 7
+Dice: 2
+Dice: 11
+Dice: 20
+Dice: 15
+Up
+Left
+Down
+Right
+Up
+Move left
+Move right
+Move right
+Move right
+Move left
+Move up
+Move up
+Move up
+Move up
+Move up
+Move up
+Move up
+Move up
+Move up
+Move up
+Move up
+Move up
+Move up
+Move up
+Move up
+Move up
+Move up
+Move up
+Move up
+Move up
+Dice Roll: 20
+Dice Roll: 19
+Dice Roll: 10
+Dice Roll: 12
+Dice Roll: 14
+Dice Roll: 13
+Dice Roll: 6
+Dice Roll: 1
+Dice Roll: 11
+Dice Roll: 3
+Dice Roll: 17
+Dice Roll: 19
+Dice Roll: 5
+Dice Roll: 11
+Dice Roll: 5
+Dice Roll: 3
+Dice Roll: 13
+Dice Roll: 19
+Dice Roll: 19
+Dice Roll: 13
+Dice Roll: 18
+Dice Roll: 12
+Dice Roll: 14
+Dice Roll: 12
+Dice Roll: 16
+Dice Roll: 6
+Move up
+Move up
+Move up
+Move up
+Move up
+Move right
+Move right
+Move right
+Move up
+Move up
+Move right
+Move right
+Move right
+Move left
+Move left
+Move left
+Move left
+Move left
+Move left
+Move left
+Move left
+Move left
+Move left
+Move left
+Move right
+Move right
+Move right
+Move right
+Move right
+Move right
+Move right
+Move right
+Move right
+Move right
+Move right
+Move right
+Move right
+Move right
+Move right
+Move right
+Move right
+Move right
+Move right
+Move right
+Move right
+Move right
+Move right
+Move right
+Move right
+Move right
+Move right
+Move right
+Move right
+Move right
+Move up
+Move up
+Move left
+Move up
+Move right
+Move down
+Move left
+Move left
+Move left
+Move left
+Move left
+Move up
+Move up
+Dice Roll: 8
+Dice Roll: 18
+Dice Roll: 5
+Dice Roll: 19
+Dice Roll: 13
+Dice Roll: 13
+Dice Roll: 19
+Dice Roll: 11
+Dice Roll: 10
+Dice Roll: 3
+Dice Roll: 13
+Dice Roll: 11
+Dice Roll: 19
+Dice Roll: 8
+Dice Roll: 18
+Dice Roll: 20
+Dice Roll: 12
+Dice Roll: 17
+Dice Roll: 9
+Dice Roll: 10
+Dice Roll: 13
+Dice Roll: 2
+Dice Roll: 17
+Dice Roll: 19
+Dice Roll: 8
+Dice Roll: 4
+Dice Roll: 13
+Dice Roll: 19
+Dice Roll: 15
+Dice Roll: 2
+Dice Roll: 17
+Dice Roll: 14
+Dice Roll: 17
+Dice Roll: 5
+Dice Roll: 18
+Dice Roll: 20
+Dice Roll: 5
+Dice Roll: 17
+Dice Roll: 3
+Dice Roll: 17
+Dice Roll: 16
+Dice Roll: 19
+Dice Roll: 5
+Dice Roll: 13
+Dice Roll: 1
+Dice Roll: 4
+Dice Roll: 7
+Dice Roll: 4
+Dice Roll: 6
+Dice Roll: 19
+Dice Roll: 5
+Dice Roll: 9
+Dice Roll: 4
+Dice Roll: 4
+Dice Roll: 20
+Dice Roll: 9
+Dice Roll: 2
+Dice Roll: 2
+Dice Roll: 18
+Dice Roll: 1
+Dice Roll: 12
+Dice Roll: 11
+Dice Roll: 10
+Dice Roll: 6
+Dice Roll: 5
+Dice Roll: 6
+Dice Roll: 4
+Dice Roll: 11
+Dice Roll: 16
+Dice Roll: 5
+Dice Roll: 20
+Move up
+Move up
+Dice Roll: 1
+Move down
+Move up
+Move left
+Move down
+Move right
+Dice Roll: 4
+Dice Roll: 10
+Dice Roll: 19
+Dice Roll: 14
+Dice Roll: 2
+Dice Roll: 5
+Dice Roll: 14
+Dice Roll: 13
+Dice Roll: 6
+Dice Roll: 12
+Dice Roll: 12
+Dice Roll: 13
+Dice Roll: 13

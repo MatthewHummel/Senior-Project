@@ -1277,14 +1277,14 @@ MonoBehaviour:
   m_HandleRect: {fileID: 210584683}
   m_Direction: 0
   m_MinValue: 0
-  m_MaxValue: 100
+  m_MaxValue: 10
   m_WholeNumbers: 0
-  m_Value: 50
+  m_Value: 1
   m_OnValueChanged:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 2099606273}
-        m_TargetAssemblyTypeName: AudioController, Assembly-CSharp
+      - m_Target: {fileID: 1089052249}
+        m_TargetAssemblyTypeName: MenuController, Assembly-CSharp
         m_MethodName: SetVolume
         m_Mode: 0
         m_Arguments:
@@ -1469,7 +1469,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -178.7, y: 3.507}
+  m_AnchoredPosition: {x: -178.27, y: 19}
   m_SizeDelta: {x: 356.546, y: 77.4785}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &168318312
@@ -1831,8 +1831,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 89839f53fdc13684cb078b146c2bf33e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  firstlevel: 
-  optionsScreen: {fileID: 1117625767}
 --- !u!1 &210584682
 GameObject:
   m_ObjectHideFlags: 0
@@ -3214,7 +3212,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 429537554}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 1089052249}
+        m_TargetAssemblyTypeName: MenuController, Assembly-CSharp
+        m_MethodName: ResetButton
+        m_Mode: 5
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: Audio
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &429537554
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -4173,8 +4183,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 89839f53fdc13684cb078b146c2bf33e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  firstlevel: 
-  optionsScreen: {fileID: 0}
 --- !u!1 &627964497
 GameObject:
   m_ObjectHideFlags: 0
@@ -4219,8 +4227,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 89839f53fdc13684cb078b146c2bf33e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  firstlevel: 
-  optionsScreen: {fileID: 0}
 --- !u!1 &695679434
 GameObject:
   m_ObjectHideFlags: 0
@@ -4395,7 +4401,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 21, y: -175}
+  m_AnchoredPosition: {x: 14, y: -174.82}
   m_SizeDelta: {x: 176.4564, y: 62.5}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &704765475
@@ -5273,7 +5279,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 952596431}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 1089052249}
+        m_TargetAssemblyTypeName: MenuController, Assembly-CSharp
+        m_MethodName: VolumeApply
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &952596431
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -5889,8 +5907,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 89839f53fdc13684cb078b146c2bf33e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  firstlevel: 
-  optionsScreen: {fileID: 0}
 --- !u!1 &1013786961
 GameObject:
   m_ObjectHideFlags: 0
@@ -6841,9 +6857,12 @@ MonoBehaviour:
   m_GameObject: {fileID: 1089052247}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 89839f53fdc13684cb078b146c2bf33e, type: 3}
+  m_Script: {fileID: 11500000, guid: 9ff0f398f49dbb747947ecc46f771d63, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  volumeTextValue: {fileID: 1371349409}
+  volumeSlider: {fileID: 108424581}
+  defaultVolume: 1
   firstlevel: 
   optionsScreen: {fileID: 0}
 --- !u!1 &1107540767
@@ -7420,8 +7439,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 610.9, y: 1.9}
-  m_SizeDelta: {x: 160, y: 20}
+  m_AnchoredPosition: {x: 407.879, y: 1.9}
+  m_SizeDelta: {x: 24.652, y: 20}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1190115168
 MonoBehaviour:
@@ -8768,8 +8787,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 609.3, y: 1.9}
-  m_SizeDelta: {x: 160, y: 20}
+  m_AnchoredPosition: {x: 406.441, y: -0.000020742}
+  m_SizeDelta: {x: 23.627, y: 20}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!1 &1424970966
 GameObject:
@@ -8880,7 +8899,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -175, y: -80.957184}
+  m_AnchoredPosition: {x: -178.27, y: -72}
   m_SizeDelta: {x: 356.546, y: 77.4785}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1431630961
@@ -9086,8 +9105,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 89839f53fdc13684cb078b146c2bf33e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  firstlevel: 
-  optionsScreen: {fileID: 0}
 --- !u!1 &1488745869
 GameObject:
   m_ObjectHideFlags: 0
@@ -9126,7 +9143,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -180.9, y: 85.50441}
+  m_AnchoredPosition: {x: -178.7, y: 107}
   m_SizeDelta: {x: 356.546, y: 77.4785}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1488745871
@@ -9248,7 +9265,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -298, y: -181}
+  m_AnchoredPosition: {x: -288.41, y: -174.817}
   m_SizeDelta: {x: 94.924, y: 62.5}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1514541352
@@ -9519,7 +9536,7 @@ AudioSource:
   OutputAudioMixerGroup: {fileID: 0}
   m_audioClip: {fileID: 8300000, guid: eb580a6a3fa47cc4c8fe2149e2c46e64, type: 3}
   m_PlayOnAwake: 1
-  m_Volume: 0.026
+  m_Volume: 0.066
   m_Pitch: 1
   Loop: 1
   Mute: 0
@@ -9707,8 +9724,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 89839f53fdc13684cb078b146c2bf33e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  firstlevel: 
-  optionsScreen: {fileID: 0}
 --- !u!1 &1557359169
 GameObject:
   m_ObjectHideFlags: 0
@@ -13056,4 +13071,5 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b49b7521726a62c4eafa21a1ae2223c9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  volumeTextValue: {fileID: 0}
   volumeSlider: {fileID: 108424581}

@@ -2,21 +2,23 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+using UnityEngine.SceneManagement;
+using TMPro;
 
 public class AudioController : MonoBehaviour
 {
-
-    [SerializeField] Slider volumeSlider;
-    private void Awake()
-    {
-        if (PlayerPrefs.HasKey("Volume"))
-        SetVolume(PlayerPrefs.GetFloat("Volume"));
-        volumeSlider.value = PlayerPrefs.GetFloat("Volume");
-    }
+    [Header("Voulme Setting")]
+    [SerializeField] private TMP_Text volumeTextValue = null;
+    [SerializeField] private Slider volumeSlider =null;
 
     public void SetVolume (float volume)
     {
         AudioListener.volume = volume;
-        PlayerPrefs.SetFloat("Volume" , volume);
+        volumeTextValue.text = volume.ToString("0.0");
+    }
+
+    public void VolumeApply()
+    {
+        PlayerPrefs.SetFloat("Volume", AudioListener.volume);
     }
 }

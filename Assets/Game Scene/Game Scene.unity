@@ -977,7 +977,7 @@ GameObject:
   - component: {fileID: 489961008}
   - component: {fileID: 489961007}
   m_Layer: 5
-  m_Name: Canvas (1)
+  m_Name: GameSpace
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -2405,8 +2405,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: 0, y: 0}
-  m_SizeDelta: {x: 0, y: 0}
+  m_AnchoredPosition: {x: 0, y: 13}
+  m_SizeDelta: {x: -299.543, y: -205.499}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1019331325
 MonoBehaviour:
@@ -2428,7 +2428,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 21300000, guid: 70d5b66f0d8e6314ab4ee5e94155a119, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 9b04c4e30a3c6894ab0ca2594e999936, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -3040,7 +3040,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 58.61267, y: 336}
+  m_AnchoredPosition: {x: 0.000045776, y: 370.17}
   m_SizeDelta: {x: 916.8629, y: 78.0065}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1196988169
@@ -3183,7 +3183,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: Generate
+  m_text: GENERATE
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 1a5f1bb65967a5843bb3e8bc7834c366, type: 2}
   m_sharedMaterial: {fileID: -3746813898841779882, guid: 1a5f1bb65967a5843bb3e8bc7834c366, type: 2}
@@ -3376,6 +3376,7 @@ GameObject:
   - component: {fileID: 1454505604}
   - component: {fileID: 1454505603}
   - component: {fileID: 1454505602}
+  - component: {fileID: 1454505605}
   m_Layer: 0
   m_Name: Main Camera
   m_TagString: MainCamera
@@ -3457,6 +3458,50 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1454505605
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1454505601}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a79441f348de89743a2939f4d699eac1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_RenderShadows: 1
+  m_RequiresDepthTextureOption: 2
+  m_RequiresOpaqueTextureOption: 2
+  m_CameraType: 0
+  m_Cameras: []
+  m_RendererIndex: -1
+  m_VolumeLayerMask:
+    serializedVersion: 2
+    m_Bits: 1
+  m_VolumeTrigger: {fileID: 0}
+  m_VolumeFrameworkUpdateModeOption: 2
+  m_RenderPostProcessing: 0
+  m_Antialiasing: 0
+  m_AntialiasingQuality: 2
+  m_StopNaN: 0
+  m_Dithering: 0
+  m_ClearDepth: 1
+  m_AllowXRRendering: 1
+  m_AllowHDROutput: 1
+  m_UseScreenCoordOverride: 0
+  m_ScreenSizeOverride: {x: 0, y: 0, z: 0, w: 0}
+  m_ScreenCoordScaleBias: {x: 0, y: 0, z: 0, w: 0}
+  m_RequiresDepthTexture: 0
+  m_RequiresColorTexture: 0
+  m_Version: 2
+  m_TaaSettings:
+    quality: 3
+    frameInfluence: 0.1
+    jitterScale: 1
+    mipBias: 0
+    varianceClampScale: 0.9
+    contrastAdaptiveSharpening: 0
 --- !u!1 &1533491983
 GameObject:
   m_ObjectHideFlags: 0
@@ -3671,7 +3716,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: Who would you like to be?
+  m_text: CHARACTER CREATION
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 1a5f1bb65967a5843bb3e8bc7834c366, type: 2}
   m_sharedMaterial: {fileID: -3746813898841779882, guid: 1a5f1bb65967a5843bb3e8bc7834c366, type: 2}
@@ -3698,8 +3743,8 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 54
-  m_fontSizeBase: 54
+  m_fontSize: 60
+  m_fontSizeBase: 60
   m_fontWeight: 400
   m_enableAutoSizing: 0
   m_fontSizeMin: 18

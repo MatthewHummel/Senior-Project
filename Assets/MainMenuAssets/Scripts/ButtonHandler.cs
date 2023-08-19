@@ -9,8 +9,20 @@ public class ButtonHandler : MonoBehaviour
 {
     public TextMeshProUGUI Textfield;
 
-    public void SetText(string text)
+    public void SetText(string className)
     {
-        Textfield.text = text;
+        Textfield.text = "" + className;
+        OnClassButtonClicked(className);
     }
+
+    public void OnClassButtonClicked(string className)
+    {
+        PlayerPrefs.SetString("SelectedClass", className);
+    }
+
+    public void LoadMainGameScene()
+    {
+        SceneManager.LoadSceneAsync("MainGame");
+    }
+
 }

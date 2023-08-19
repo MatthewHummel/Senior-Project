@@ -651,6 +651,7 @@ GameObject:
   - component: {fileID: 377331307}
   - component: {fileID: 377331306}
   - component: {fileID: 377331308}
+  - component: {fileID: 377331309}
   m_Layer: 0
   m_Name: MenuController
   m_TagString: Untagged
@@ -704,6 +705,19 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   display_player_name: {fileID: 202248668}
   Textfield: {fileID: 0}
+--- !u!114 &377331309
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 377331305}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9fc311e7a09b75d43a16d57c3fe9b96d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  selectedClassText: {fileID: 811460945}
 --- !u!1 &400645024
 GameObject:
   m_ObjectHideFlags: 0
@@ -1400,7 +1414,7 @@ MonoBehaviour:
   m_textAlignment: 65535
   m_characterSpacing: 0
   m_wordSpacing: 0
-  m_lineSpacing: 0
+  m_lineSpacing: 9.1
   m_lineSpacingMax: 0
   m_paragraphSpacing: 0
   m_charWidthMaxAdj: 0
@@ -1584,6 +1598,7 @@ GameObject:
   - component: {fileID: 811460944}
   - component: {fileID: 811460946}
   - component: {fileID: 811460945}
+  - component: {fileID: 811460947}
   m_Layer: 5
   m_Name: stats_text_holder
   m_TagString: Untagged
@@ -1608,7 +1623,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 326, y: -40.63}
+  m_AnchoredPosition: {x: 326, y: 4.04}
   m_SizeDelta: {x: 484.85, y: 70.512}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &811460945
@@ -1631,7 +1646,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: Stats
+  m_text: 
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 39be650d00f9df64d88d530d88790072, type: 2}
   m_sharedMaterial: {fileID: 7406083159652590556, guid: 39be650d00f9df64d88d530d88790072, type: 2}
@@ -1708,6 +1723,19 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 811460943}
   m_CullTransparentMesh: 1
+--- !u!114 &811460947
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 811460943}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9fc311e7a09b75d43a16d57c3fe9b96d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  selectedClassText: {fileID: 0}
 --- !u!1 &864807259
 GameObject:
   m_ObjectHideFlags: 0

@@ -1357,6 +1357,7 @@ GameObject:
   - component: {fileID: 876783818}
   - component: {fileID: 876783817}
   - component: {fileID: 876783820}
+  - component: {fileID: 876783821}
   m_Layer: 5
   m_Name: Fighter
   m_TagString: Untagged
@@ -1492,6 +1493,19 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Textfield: {fileID: 267855053}
+--- !u!114 &876783821
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 876783815}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f94b83d3b27c21742bd5ab7943a9bec2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  characterClass: 5
 --- !u!1 &990415415
 GameObject:
   m_ObjectHideFlags: 0
@@ -2365,6 +2379,7 @@ GameObject:
   - component: {fileID: 1422665863}
   - component: {fileID: 1422665862}
   - component: {fileID: 1422665865}
+  - component: {fileID: 1422665866}
   m_Layer: 5
   m_Name: Barbarian
   m_TagString: Untagged
@@ -2500,6 +2515,19 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Textfield: {fileID: 267855053}
+--- !u!114 &1422665866
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1422665860}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f94b83d3b27c21742bd5ab7943a9bec2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  characterClass: 0
 --- !u!1 &1451278659
 GameObject:
   m_ObjectHideFlags: 0
@@ -2783,6 +2811,7 @@ GameObject:
   - component: {fileID: 1493970365}
   - component: {fileID: 1493970364}
   - component: {fileID: 1493970367}
+  - component: {fileID: 1493970368}
   m_Layer: 5
   m_Name: Archer
   m_TagString: Untagged
@@ -2918,6 +2947,19 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Textfield: {fileID: 267855053}
+--- !u!114 &1493970368
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1493970362}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f94b83d3b27c21742bd5ab7943a9bec2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  characterClass: 2
 --- !u!1 &1517258863
 GameObject:
   m_ObjectHideFlags: 0
@@ -3498,6 +3540,7 @@ GameObject:
   - component: {fileID: 1808383179}
   - component: {fileID: 1808383178}
   - component: {fileID: 1808383181}
+  - component: {fileID: 1808383182}
   m_Layer: 5
   m_Name: Wizard
   m_TagString: Untagged
@@ -3633,6 +3676,19 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Textfield: {fileID: 267855053}
+--- !u!114 &1808383182
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1808383176}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f94b83d3b27c21742bd5ab7943a9bec2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  characterClass: 1
 --- !u!1 &1829357846
 GameObject:
   m_ObjectHideFlags: 0
@@ -3646,6 +3702,7 @@ GameObject:
   - component: {fileID: 1829357849}
   - component: {fileID: 1829357848}
   - component: {fileID: 1829357851}
+  - component: {fileID: 1829357852}
   m_Layer: 5
   m_Name: Giant
   m_TagString: Untagged
@@ -3781,6 +3838,19 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Textfield: {fileID: 267855053}
+--- !u!114 &1829357852
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1829357846}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f94b83d3b27c21742bd5ab7943a9bec2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  characterClass: 3
 --- !u!1 &1872295105
 GameObject:
   m_ObjectHideFlags: 0
@@ -3794,6 +3864,7 @@ GameObject:
   - component: {fileID: 1872295108}
   - component: {fileID: 1872295107}
   - component: {fileID: 1872295110}
+  - component: {fileID: 1872295111}
   m_Layer: 5
   m_Name: Thief
   m_TagString: Untagged
@@ -3929,6 +4000,19 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Textfield: {fileID: 267855053}
+--- !u!114 &1872295111
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1872295105}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f94b83d3b27c21742bd5ab7943a9bec2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  characterClass: 6
 --- !u!1 &1917187576
 GameObject:
   m_ObjectHideFlags: 0
@@ -4077,6 +4161,7 @@ GameObject:
   - component: {fileID: 1967966581}
   - component: {fileID: 1967966580}
   - component: {fileID: 1967966583}
+  - component: {fileID: 1967966584}
   m_Layer: 5
   m_Name: Bard
   m_TagString: Untagged
@@ -4212,6 +4297,19 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Textfield: {fileID: 267855053}
+--- !u!114 &1967966584
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1967966578}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f94b83d3b27c21742bd5ab7943a9bec2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  characterClass: 4
 --- !u!1 &1992525901
 GameObject:
   m_ObjectHideFlags: 0

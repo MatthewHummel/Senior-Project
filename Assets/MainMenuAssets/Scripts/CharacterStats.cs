@@ -134,6 +134,9 @@ public class CharacterStats : MonoBehaviour
         foreach (CharacterClass characterClass in allClasses)
         {
             Stats randomStats = GenerateRandomStats(characterClass);
+
+            CharacterDataHolder.SelectedCharacterStats = randomStats;
+
             Debug.Log(characterClass.ToString() + " Stats: " +
                 "Vitality: " + randomStats.vitality +
                 ", Defense: " + randomStats.defense +

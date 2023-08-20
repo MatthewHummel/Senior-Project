@@ -127,24 +127,18 @@ public class CharacterStats : MonoBehaviour
         return randomStats;
     }
 
-    void Start()
+    public void GenerateAndSaveRandomStats(CharacterClass selectedClass)
     {
-        CharacterClass[] allClasses = (CharacterClass[])System.Enum.GetValues(typeof(CharacterClass));
+        Stats randomStats = GenerateRandomStats(selectedClass);
+        CharacterDataHolder.SelectedCharacterStats = randomStats;
 
-        foreach (CharacterClass characterClass in allClasses)
-        {
-            Stats randomStats = GenerateRandomStats(characterClass);
-
-            CharacterDataHolder.SelectedCharacterStats = randomStats;
-
-            Debug.Log(characterClass.ToString() + " Stats: " +
-                "Vitality: " + randomStats.vitality +
-                ", Defense: " + randomStats.defense +
-                ", Strength: " + randomStats.strength +
-                ", Intelligence: " + randomStats.intelligence +
-                ", Dexterity: " + randomStats.dexterity +
-                ", Charisma: " + randomStats.charisma +
-                ", Sneak: " + randomStats.sneak);
-        }
+        Debug.Log(selectedClass.ToString() + " Stats: " +
+            "Vitality: " + randomStats.vitality +
+            ", Defense: " + randomStats.defense +
+            ", Strength: " + randomStats.strength +
+            ", Intelligence: " + randomStats.intelligence +
+            ", Dexterity: " + randomStats.dexterity +
+            ", Charisma: " + randomStats.charisma +
+            ", Sneak: " + randomStats.sneak);
     }
 }

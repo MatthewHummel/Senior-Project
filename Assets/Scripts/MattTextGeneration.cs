@@ -20,10 +20,10 @@ namespace HuggingFace.API.Examples
         [SerializeField] private Button leftButton;
         [SerializeField] private Button rightButton;
 
-        [SerializeField] private TMP_InputField upNavText;
-        [SerializeField] private TMP_InputField downNavText;
-        [SerializeField] private TMP_InputField leftNavText;
-        [SerializeField] private TMP_InputField rightNavText;
+        [SerializeField] private TMP_InputField navText;
+        //[SerializeField] private TMP_InputField downNavText;
+        //[SerializeField] private TMP_InputField leftNavText;
+        //[SerializeField] private TMP_InputField rightNavText;
 
         private string classText;
         private string nameText;
@@ -72,26 +72,26 @@ namespace HuggingFace.API.Examples
 
         public void UpNavButtonClicked()
         {
-            upNavText.text = "I navigate forward.";
-            SendQuery();
+            navText.text = "I navigate forward.";
+            SendUpQuery();
         }
 
         public void DownNavButtonClicked()
         {
-            upNavText.text = "I navigate backwards.";
-            SendQuery();
+            navText.text = "I navigate backwards.";
+            SendDownQuery();
         }
 
         public void LeftNavButtonClicked()
         {
-            upNavText.text = "I navigate to the left.";
-            SendQuery();
+            navText.text = "I navigate to the left.";
+            SendLeftQuery();
         }
 
         public void RightNavButtonClicked()
         {
-            upNavText.text = "I navigate to the right.";
-            SendQuery();
+            navText.text = "I navigate to the right.";
+            SendRightQuery();
         }
 
 
@@ -171,6 +171,270 @@ namespace HuggingFace.API.Examples
 
         }
 
+
+        private void SendUpQuery()
+        {
+            //if (isWaitingForResponse) return;
+
+            //the user-entered text
+            string inputText = "I navigate forward.";
+            /*if (string.IsNullOrEmpty(inputText))
+            {
+                return;
+            }*/
+
+            isWaitingForResponse = true;
+            inputField.interactable = false;
+            sendButton.interactable = false;
+            inputField.text = "";
+
+            upButton.interactable = false;
+            downButton.interactable = false;
+            leftButton.interactable = false;
+            rightButton.interactable = false;
+
+
+            conversationText.text += $"<color=#{userColorHex}>You: {inputText}</color>\n";
+            conversationText.text += "Bot is typing...\n";
+
+            Canvas.ForceUpdateCanvases();
+            scrollRect.verticalNormalizedPosition = 0f;
+
+
+            HuggingFaceAPI.TextGeneration(inputText, response =>
+            {
+                //string reply = response;
+                conversationText.text = conversationText.text.TrimEnd("Bot is typing...\n".ToCharArray());
+                conversationText.text += $"\n<color=#{botColorHex}>Bot: {response}</color>\n\n";
+                inputField.interactable = true;
+                sendButton.interactable = true;
+                inputField.ActivateInputField();
+                isWaitingForResponse = false;
+                Canvas.ForceUpdateCanvases();
+                scrollRect.verticalNormalizedPosition = 0f;
+
+                upButton.interactable = true;
+                downButton.interactable = true;
+                leftButton.interactable = true;
+                rightButton.interactable = true;
+
+            }, error =>
+            {
+                conversationText.text = conversationText.text.TrimEnd("Bot is typing...\n".ToCharArray());
+                conversationText.text += $"\n<color=#{errorColorHex}>Error: {error}</color>\n\n";
+                inputField.interactable = true;
+                sendButton.interactable = true;
+                inputField.ActivateInputField();
+                isWaitingForResponse = false;
+                Canvas.ForceUpdateCanvases();
+                scrollRect.verticalNormalizedPosition = 0f;
+
+                upButton.interactable = true;
+                downButton.interactable = true;
+                leftButton.interactable = true;
+                rightButton.interactable = true;
+
+            });
+
+        }
+
+        private void SendDownQuery()
+        {
+            if (isWaitingForResponse) return;
+
+            //the user-entered text
+            string inputText = "I navigate backwards.";
+            /*if (string.IsNullOrEmpty(inputText))
+            {
+                return;
+            }*/
+
+            isWaitingForResponse = true;
+            inputField.interactable = false;
+            sendButton.interactable = false;
+            inputField.text = "";
+
+            upButton.interactable = false;
+            downButton.interactable = false;
+            leftButton.interactable = false;
+            rightButton.interactable = false;
+
+
+            conversationText.text += $"<color=#{userColorHex}>You: {inputText}</color>\n";
+            conversationText.text += "Bot is typing...\n";
+
+            Canvas.ForceUpdateCanvases();
+            scrollRect.verticalNormalizedPosition = 0f;
+
+
+            HuggingFaceAPI.TextGeneration(inputText, response =>
+            {
+                //string reply = response;
+                conversationText.text = conversationText.text.TrimEnd("Bot is typing...\n".ToCharArray());
+                conversationText.text += $"\n<color=#{botColorHex}>Bot: {response}</color>\n\n";
+                inputField.interactable = true;
+                sendButton.interactable = true;
+                inputField.ActivateInputField();
+                isWaitingForResponse = false;
+                Canvas.ForceUpdateCanvases();
+                scrollRect.verticalNormalizedPosition = 0f;
+
+                upButton.interactable = true;
+                downButton.interactable = true;
+                leftButton.interactable = true;
+                rightButton.interactable = true;
+
+            }, error =>
+            {
+                conversationText.text = conversationText.text.TrimEnd("Bot is typing...\n".ToCharArray());
+                conversationText.text += $"\n<color=#{errorColorHex}>Error: {error}</color>\n\n";
+                inputField.interactable = true;
+                sendButton.interactable = true;
+                inputField.ActivateInputField();
+                isWaitingForResponse = false;
+                Canvas.ForceUpdateCanvases();
+                scrollRect.verticalNormalizedPosition = 0f;
+
+                upButton.interactable = true;
+                downButton.interactable = true;
+                leftButton.interactable = true;
+                rightButton.interactable = true;
+
+            });
+
+        }
+
+        private void SendLeftQuery()
+        {
+            if (isWaitingForResponse) return;
+
+            //the user-entered text
+            string inputText = "I navigate to the left.";
+            /*if (string.IsNullOrEmpty(inputText))
+            {
+                return;
+            }*/
+
+            isWaitingForResponse = true;
+            inputField.interactable = false;
+            sendButton.interactable = false;
+            inputField.text = "";
+
+            upButton.interactable = false;
+            downButton.interactable = false;
+            leftButton.interactable = false;
+            rightButton.interactable = false;
+
+
+            conversationText.text += $"<color=#{userColorHex}>You: {inputText}</color>\n";
+            conversationText.text += "Bot is typing...\n";
+
+            Canvas.ForceUpdateCanvases();
+            scrollRect.verticalNormalizedPosition = 0f;
+
+
+            HuggingFaceAPI.TextGeneration(inputText, response =>
+            {
+                //string reply = response;
+                conversationText.text = conversationText.text.TrimEnd("Bot is typing...\n".ToCharArray());
+                conversationText.text += $"\n<color=#{botColorHex}>Bot: {response}</color>\n\n";
+                inputField.interactable = true;
+                sendButton.interactable = true;
+                inputField.ActivateInputField();
+                isWaitingForResponse = false;
+                Canvas.ForceUpdateCanvases();
+                scrollRect.verticalNormalizedPosition = 0f;
+
+                upButton.interactable = true;
+                downButton.interactable = true;
+                leftButton.interactable = true;
+                rightButton.interactable = true;
+
+            }, error =>
+            {
+                conversationText.text = conversationText.text.TrimEnd("Bot is typing...\n".ToCharArray());
+                conversationText.text += $"\n<color=#{errorColorHex}>Error: {error}</color>\n\n";
+                inputField.interactable = true;
+                sendButton.interactable = true;
+                inputField.ActivateInputField();
+                isWaitingForResponse = false;
+                Canvas.ForceUpdateCanvases();
+                scrollRect.verticalNormalizedPosition = 0f;
+
+                upButton.interactable = true;
+                downButton.interactable = true;
+                leftButton.interactable = true;
+                rightButton.interactable = true;
+
+            });
+
+        }
+
+        private void SendRightQuery()
+        {
+            if (isWaitingForResponse) return;
+
+            //the user-entered text
+            string inputText = "I navigate to the right.";
+            /*if (string.IsNullOrEmpty(inputText))
+            {
+                return;
+            }*/
+
+            isWaitingForResponse = true;
+            inputField.interactable = false;
+            sendButton.interactable = false;
+            inputField.text = "";
+
+            upButton.interactable = false;
+            downButton.interactable = false;
+            leftButton.interactable = false;
+            rightButton.interactable = false;
+
+
+            conversationText.text += $"<color=#{userColorHex}>You: {inputText}</color>\n";
+            conversationText.text += "Bot is typing...\n";
+
+            Canvas.ForceUpdateCanvases();
+            scrollRect.verticalNormalizedPosition = 0f;
+
+
+            HuggingFaceAPI.TextGeneration(inputText, response =>
+            {
+                //string reply = response;
+                conversationText.text = conversationText.text.TrimEnd("Bot is typing...\n".ToCharArray());
+                conversationText.text += $"\n<color=#{botColorHex}>Bot: {response}</color>\n\n";
+                inputField.interactable = true;
+                sendButton.interactable = true;
+                inputField.ActivateInputField();
+                isWaitingForResponse = false;
+                Canvas.ForceUpdateCanvases();
+                scrollRect.verticalNormalizedPosition = 0f;
+
+                upButton.interactable = true;
+                downButton.interactable = true;
+                leftButton.interactable = true;
+                rightButton.interactable = true;
+
+            }, error =>
+            {
+                conversationText.text = conversationText.text.TrimEnd("Bot is typing...\n".ToCharArray());
+                conversationText.text += $"\n<color=#{errorColorHex}>Error: {error}</color>\n\n";
+                inputField.interactable = true;
+                sendButton.interactable = true;
+                inputField.ActivateInputField();
+                isWaitingForResponse = false;
+                Canvas.ForceUpdateCanvases();
+                scrollRect.verticalNormalizedPosition = 0f;
+
+                upButton.interactable = true;
+                downButton.interactable = true;
+                leftButton.interactable = true;
+                rightButton.interactable = true;
+
+            });
+
+        }
 
         private void SendInitialQuery()
         {

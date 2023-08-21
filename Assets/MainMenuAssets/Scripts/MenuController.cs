@@ -41,6 +41,7 @@ public GameObject optionsScreen;
     public void ExitButton()
     {
         Application.Quit();
+        Debug.Log("Quit game");
     }
 
     public void SetVolume(float volume)

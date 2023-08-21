@@ -32,3 +32,4 @@ Dice Roll: 6
 Dice Roll: 5
 Dice Roll: 19
 Move up
+Dice Roll: 4

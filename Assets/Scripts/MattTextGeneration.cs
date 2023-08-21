@@ -1,6 +1,7 @@
 using UnityEngine;
 using TMPro;
 using UnityEngine.UI;
+using System.Runtime.CompilerServices;
 
 namespace HuggingFace.API.Examples
 {
@@ -24,6 +25,10 @@ namespace HuggingFace.API.Examples
         [SerializeField] private TMP_InputField leftNavText;
         [SerializeField] private TMP_InputField rightNavText;
 
+        private string classText;
+        private string nameText;
+
+
 
         private TextGenerationTask textGenerationTask = new TextGenerationTask();
 
@@ -38,6 +43,14 @@ namespace HuggingFace.API.Examples
             userColorHex = ColorUtility.ToHtmlStringRGB(userTextColor);
             botColorHex = ColorUtility.ToHtmlStringRGB(botTextColor);
             errorColorHex = ColorUtility.ToHtmlStringRGB(Color.red);
+
+            if (PlayerPrefs.HasKey("SelectedClass"))
+            {
+                classText = PlayerPrefs.GetString("SelectedClass");
+            }
+
+            nameText = CharacterScene.characterscene.player_name;
+
         }
 
         private void Start()
@@ -46,6 +59,10 @@ namespace HuggingFace.API.Examples
             clearButton.onClick.AddListener(ClearButtonClicked);
             inputField.ActivateInputField();
             inputField.onEndEdit.AddListener(OnInputFieldEndEdit);
+
+
+            SendInitialQuery();
+
         }
 
         private void SendButtonClicked()
@@ -151,7 +168,77 @@ namespace HuggingFace.API.Examples
                 rightButton.interactable = true;
 
             });
+
         }
+
+
+        private void SendInitialQuery()
+        {
+            if (isWaitingForResponse) return;
+            
+
+            //the user-entered text
+            string inputText = "Welcome to The Generative Lands! I am " + nameText + ", a " + classText + " looking for an adventure!";
+            if (string.IsNullOrEmpty(inputText))
+            {
+                return;
+            }
+
+            isWaitingForResponse = true;
+            inputField.interactable = false;
+            sendButton.interactable = false;
+            inputField.text = "";
+
+            upButton.interactable = false;
+            downButton.interactable = false;
+            leftButton.interactable = false;
+            rightButton.interactable = false;
+
+
+            conversationText.text += $"<color=#{userColorHex}>You: {inputText}</color>\n";
+            conversationText.text += "Bot is typing...\n";
+
+            Canvas.ForceUpdateCanvases();
+            scrollRect.verticalNormalizedPosition = 0f;
+
+
+            HuggingFaceAPI.TextGeneration(inputText, response =>
+            {
+                //string reply = response;
+                conversationText.text = conversationText.text.TrimEnd("Bot is typing...\n".ToCharArray());
+                conversationText.text += $"\n<color=#{botColorHex}>Bot: {response}</color>\n\n";
+                inputField.interactable = true;
+                sendButton.interactable = true;
+                inputField.ActivateInputField();
+                isWaitingForResponse = false;
+                Canvas.ForceUpdateCanvases();
+                scrollRect.verticalNormalizedPosition = 0f;
+
+                upButton.interactable = true;
+                downButton.interactable = true;
+                leftButton.interactable = true;
+                rightButton.interactable = true;
+
+            }, error =>
+            {
+                conversationText.text = conversationText.text.TrimEnd("Bot is typing...\n".ToCharArray());
+                conversationText.text += $"\n<color=#{errorColorHex}>Error: {error}</color>\n\n";
+                inputField.interactable = true;
+                sendButton.interactable = true;
+                inputField.ActivateInputField();
+                isWaitingForResponse = false;
+                Canvas.ForceUpdateCanvases();
+                scrollRect.verticalNormalizedPosition = 0f;
+
+                upButton.interactable = true;
+                downButton.interactable = true;
+                leftButton.interactable = true;
+                rightButton.interactable = true;
+
+            });
+
+        }
+
 
         private void ClearButtonClicked()
         {

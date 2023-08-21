@@ -1287,9 +1287,9 @@ MonoBehaviour:
   leftButton: {fileID: 1339810173}
   rightButton: {fileID: 1738627860}
   upNavText: {fileID: 1036476394}
-  downNavText: {fileID: 0}
-  leftNavText: {fileID: 0}
-  rightNavText: {fileID: 0}
+  downNavText: {fileID: 1036476394}
+  leftNavText: {fileID: 1036476394}
+  rightNavText: {fileID: 1036476394}
 --- !u!114 &598771924
 MonoBehaviour:
   m_ObjectHideFlags: 0

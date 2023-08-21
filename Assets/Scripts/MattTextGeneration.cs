@@ -59,11 +59,31 @@ namespace HuggingFace.API.Examples
             clearButton.onClick.AddListener(ClearButtonClicked);
             inputField.ActivateInputField();
             inputField.onEndEdit.AddListener(OnInputFieldEndEdit);
-
-
             SendInitialQuery();
-
         }
+
+        //attempt to make arrow keys on keyboard work for movement. not working right now. :(
+        /*private void Update()
+        {
+            if (Input.GetKeyDown(KeyCode.LeftArrow))
+            {
+                LeftNavButtonClicked();
+            }
+            if (Input.GetKeyDown(KeyCode.RightArrow))
+            {
+                RightNavButtonClicked();
+            }
+            if (Input.GetKeyDown(KeyCode.UpArrow))
+            {
+                UpNavButtonClicked();
+            }
+            if (Input.GetKeyDown(KeyCode.DownArrow))
+            {
+                DownNavButtonClicked();
+            }
+        }*/
+
+
 
         private void SendButtonClicked()
         {
@@ -103,6 +123,7 @@ namespace HuggingFace.API.Examples
                 SendQuery();
             }
         }
+
 
         //method for sending the query to the API
         private void SendQuery()
@@ -172,9 +193,9 @@ namespace HuggingFace.API.Examples
         }
 
 
-        private void SendUpQuery()
+        public void SendUpQuery()
         {
-            //if (isWaitingForResponse) return;
+            if (isWaitingForResponse) return;
 
             //the user-entered text
             string inputText = "I navigate forward.";
@@ -238,7 +259,7 @@ namespace HuggingFace.API.Examples
 
         }
 
-        private void SendDownQuery()
+        public void SendDownQuery()
         {
             if (isWaitingForResponse) return;
 
@@ -304,7 +325,7 @@ namespace HuggingFace.API.Examples
 
         }
 
-        private void SendLeftQuery()
+        public void SendLeftQuery()
         {
             if (isWaitingForResponse) return;
 
@@ -370,7 +391,7 @@ namespace HuggingFace.API.Examples
 
         }
 
-        private void SendRightQuery()
+        public void SendRightQuery()
         {
             if (isWaitingForResponse) return;
 

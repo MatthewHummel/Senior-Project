@@ -482,7 +482,6 @@ GameObject:
   - component: {fileID: 347543090}
   - component: {fileID: 347543089}
   - component: {fileID: 347543088}
-  - component: {fileID: 347543087}
   m_Layer: 0
   m_Name: API Script
   m_TagString: Untagged
@@ -505,33 +504,6 @@ Transform:
   m_Father: {fileID: 1699518658}
   m_RootOrder: -1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &347543087
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 347543085}
-  m_Enabled: 0
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: c2a94126878ffa54fb5abbd2a64d9295, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  scrollRect: {fileID: 0}
-  conversationText: {fileID: 0}
-  inputField: {fileID: 0}
-  sendButton: {fileID: 0}
-  clearButton: {fileID: 0}
-  userTextColor: {r: 0, g: 0, b: 1, a: 1}
-  botTextColor: {r: 0, g: 0, b: 0, a: 1}
-  upButton: {fileID: 0}
-  downButton: {fileID: 0}
-  leftButton: {fileID: 0}
-  rightButton: {fileID: 0}
-  upNavText: {fileID: 0}
-  downNavText: {fileID: 0}
-  leftNavText: {fileID: 0}
-  rightNavText: {fileID: 0}
 --- !u!114 &347543088
 MonoBehaviour:
   m_ObjectHideFlags: 0

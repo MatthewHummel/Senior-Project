@@ -7,9 +7,9 @@ using TMPro;
 
 public class AudioController : MonoBehaviour
 {
-    [Header("Voulme Setting")]
+    [Header("Volume Setting")]
     [SerializeField] private TMP_Text volumeTextValue = null;
-    [SerializeField] private Slider volumeSlider =null;
+    //[SerializeField] private Slider volumeSlider =null;
 
     public void SetVolume (float volume)
     {

@@ -3,8 +3,10 @@ using UnityEngine.UI;
 using TMPro;
 using System.IO;
 
-namespace HuggingFace.API.Examples {
-    public class TextToImageExample : MonoBehaviour {
+namespace HuggingFace.API.Examples
+{
+    public class TextToImageExample : MonoBehaviour
+    {
         [SerializeField] private Image image;
         [SerializeField] private TMP_InputField inputField;
         [SerializeField] private TMP_Text statusText;
@@ -16,33 +18,40 @@ namespace HuggingFace.API.Examples {
         public string appendText;
         public TMP_Text backupText;
 
-        private void Awake() {
+        private void Awake()
+        {
             normalColorHex = ColorUtility.ToHtmlStringRGB(statusText.color);
             errorColorHex = ColorUtility.ToHtmlStringRGB(Color.red);
             image.color = Color.black;
         }
 
-        private void Start() {
+        private void Start()
+        {
             generateButton.onClick.AddListener(GenerateButtonClicked);
             inputField.ActivateInputField();
             inputField.onEndEdit.AddListener(OnInputFieldEndEdit);
         }
 
-        private void GenerateButtonClicked() {
+        private void GenerateButtonClicked()
+        {
             SendQuery();
         }
 
-        private void OnInputFieldEndEdit(string text) {
-            if (Input.GetKeyDown(KeyCode.Return) || Input.GetKeyDown(KeyCode.KeypadEnter)) {
+        private void OnInputFieldEndEdit(string text)
+        {
+            if (Input.GetKeyDown(KeyCode.Return) || Input.GetKeyDown(KeyCode.KeypadEnter))
+            {
                 SendQuery();
             }
         }
 
-        private void SendQuery() {
+        private void SendQuery()
+        {
             if (isWaitingForResponse) return;
 
             string inputText = inputField.text;
-            if (string.IsNullOrEmpty(inputText)) {
+            if (string.IsNullOrEmpty(inputText))
+            {
                 return;
             }
             appendText = "mdjrny-v4 style " + inputField.text;

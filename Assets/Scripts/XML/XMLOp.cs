@@ -3,7 +3,7 @@ using System.Xml.Serialization;
 
 public class XMLOp
 {
-    
+    //method for serializing
     public static void Serialize(object item, string path)
     {
         XmlSerializer serializer= new XmlSerializer(item.GetType());
@@ -11,7 +11,7 @@ public class XMLOp
         serializer.Serialize(writer.BaseStream, item);
         writer.Close();
     }
-
+    //method for deserializing. Using "T" to allow any type.
     public static T Deserialize<T>(string path)
     {
         XmlSerializer serializer = new XmlSerializer(typeof(T));

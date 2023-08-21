@@ -3,6 +3,8 @@ using System.Collections.Generic;
 using UnityEngine;
 using System.Xml.Serialization;
 
+//Simple class to define the XML data we want to record for the player.
+
 [XmlRoot("Player")]
 public class XMLPlayer
 {

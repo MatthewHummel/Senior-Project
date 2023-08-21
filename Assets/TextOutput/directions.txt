@@ -438,3 +438,5 @@ Move left
 Move down
 Move right
 User Input: 
+Move up
+Move up

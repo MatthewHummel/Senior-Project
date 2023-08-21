@@ -20,14 +20,10 @@ namespace HuggingFace.API.Examples
         [SerializeField] private Button leftButton;
         [SerializeField] private Button rightButton;
 
-        [SerializeField] private TMP_InputField navText;
-        //[SerializeField] private TMP_InputField downNavText;
-        //[SerializeField] private TMP_InputField leftNavText;
-        //[SerializeField] private TMP_InputField rightNavText;
+        //[SerializeField] private TMP_InputField navText;
 
         private string classText;
         private string nameText;
-
 
 
         private TextGenerationTask textGenerationTask = new TextGenerationTask();
@@ -62,8 +58,8 @@ namespace HuggingFace.API.Examples
             SendInitialQuery();
         }
 
-        //attempt to make arrow keys on keyboard work for movement. not working right now. :(
-        /*private void Update()
+       // attempt to make arrow keys on keyboard work for movement. not working right now. :(
+        private void Update()
         {
             if (Input.GetKeyDown(KeyCode.LeftArrow))
             {
@@ -81,7 +77,7 @@ namespace HuggingFace.API.Examples
             {
                 DownNavButtonClicked();
             }
-        }*/
+        }
 
 
 
@@ -92,25 +88,25 @@ namespace HuggingFace.API.Examples
 
         public void UpNavButtonClicked()
         {
-            navText.text = "I navigate forward.";
+            //navText.text = "I navigate forward.";
             SendUpQuery();
         }
 
         public void DownNavButtonClicked()
         {
-            navText.text = "I navigate backwards.";
+            //navText.text = "I navigate backwards.";
             SendDownQuery();
         }
 
         public void LeftNavButtonClicked()
         {
-            navText.text = "I navigate to the left.";
+            //navText.text = "I navigate to the left.";
             SendLeftQuery();
         }
 
         public void RightNavButtonClicked()
         {
-            navText.text = "I navigate to the right.";
+            //navText.text = "I navigate to the right.";
             SendRightQuery();
         }
 
@@ -126,7 +122,7 @@ namespace HuggingFace.API.Examples
 
 
         //method for sending the query to the API
-        private void SendQuery()
+        public void SendQuery()
         {
             if (isWaitingForResponse) return;
 
@@ -199,11 +195,7 @@ namespace HuggingFace.API.Examples
 
             //the user-entered text
             string inputText = "I navigate forward.";
-            /*if (string.IsNullOrEmpty(inputText))
-            {
-                return;
-            }*/
-
+            
             isWaitingForResponse = true;
             inputField.interactable = false;
             sendButton.interactable = false;

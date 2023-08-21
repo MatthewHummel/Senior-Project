@@ -1,0 +1,7 @@
+<?xml version="1.0"?>
+<XMLPlayer xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <name>MATTTEST</name>
+  <isPlayer>true</isPlayer>
+  <hitPoints>30</hitPoints>
+  <baseDamage>3</baseDamage>
+</XMLPlayer>

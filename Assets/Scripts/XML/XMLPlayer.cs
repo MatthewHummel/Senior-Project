@@ -14,4 +14,7 @@ public class XMLPlayer
     public int hitPoints;
 
     public int damageTaken;
+
+    //The player's stats
+    public CharacterStats.Stats characterStats;
 }

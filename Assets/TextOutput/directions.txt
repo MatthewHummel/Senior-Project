@@ -42,3 +42,140 @@ Move down
 Move down
 Move down
 Move right
+Dice Roll: 11
+Dice Roll: 15
+Dice Roll: 7
+Dice Roll: 19
+Dice Roll: 1
+Dice Roll: 19
+Dice Roll: 1
+Dice Roll: 7
+Dice Roll: 3
+Dice Roll: 4
+Dice Roll: 10
+Dice Roll: 9
+Dice Roll: 8
+Dice Roll: 19
+Dice Roll: 9
+Dice Roll: 12
+Dice Roll: 2
+Dice Roll: 18
+Dice Roll: 10
+Dice Roll: 9
+Dice Roll: 17
+Dice Roll: 9
+Dice Roll: 11
+Dice Roll: 7
+Dice Roll: 14
+Dice Roll: 6
+Move down
+Move right
+Move up
+Move left
+Move down
+Move right
+Move up
+Dice Roll: 15
+Dice Roll: 4
+Move up
+Move right
+Move down
+Move left
+Dice Roll: 13
+Dice Roll: 20
+Move up
+Dice Roll: 9
+Dice Roll: 12
+Dice Roll: 9
+Dice Roll: 4
+Dice Roll: 3
+Dice Roll: 13
+Dice Roll: 4
+Dice Roll: 4
+Dice Roll: 5
+Move up
+Dice Roll: 11
+Dice Roll: 9
+Dice Roll: 13
+Dice Roll: 13
+Dice Roll: 11
+Dice Roll: 8
+Dice Roll: 13
+Dice Roll: 15
+Dice Roll: 19
+Dice Roll: 7
+Dice Roll: 1
+Dice Roll: 10
+Dice Roll: 20
+Dice Roll: 1
+Dice Roll: 20
+Dice Roll: 14
+Dice Roll: 1
+Dice Roll: 5
+Dice Roll: 4
+Dice Roll: 13
+Dice Roll: 13
+Dice Roll: 2
+Dice Roll: 11
+Dice Roll: 10
+Dice Roll: 1
+Dice Roll: 15
+Dice Roll: 20
+Dice Roll: 5
+Dice Roll: 11
+Dice Roll: 16
+Dice Roll: 8
+Dice Roll: 1
+Dice Roll: 1
+Dice Roll: 5
+Dice Roll: 19
+Dice Roll: 1
+Dice Roll: 5
+Dice Roll: 7
+Dice Roll: 2
+Dice Roll: 1
+Dice Roll: 7
+Dice Roll: 10
+Dice Roll: 20
+Dice Roll: 18
+Dice Roll: 4
+Dice Roll: 14
+Dice Roll: 5
+Dice Roll: 14
+Dice Roll: 5
+Dice Roll: 12
+Dice Roll: 20
+Dice Roll: 17
+Dice Roll: 14
+Dice Roll: 13
+Dice Roll: 16
+Dice Roll: 8
+Dice Roll: 17
+Dice Roll: 6
+Dice Roll: 1
+Dice Roll: 1
+Dice Roll: 4
+Dice Roll: 8
+Dice Roll: 20
+Dice Roll: 16
+Dice Roll: 16
+Dice Roll: 18
+Dice Roll: 12
+Dice Roll: 11
+User Input: regdasdad
+Dice Roll: 18
+Dice Roll: 13
+Dice Roll: 11
+Dice Roll: 1
+Dice Roll: 15
+Dice Roll: 5
+Dice Roll: 20
+Dice Roll: 20
+Dice Roll: 17
+Dice Roll: 7
+Dice Roll: 17
+Dice Roll: 5
+Dice Roll: 20
+Dice Roll: 1
+Dice Roll: 10
+Dice Roll: 15

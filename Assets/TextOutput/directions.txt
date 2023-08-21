@@ -346,3 +346,4 @@ Dice Roll: 16
 User Input: hello
 User Input: Did you work!
 User Input: what is your name
+User Input: hi

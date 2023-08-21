@@ -80,7 +80,6 @@ namespace HuggingFace.API.Examples
         }
 
 
-
         private void SendButtonClicked()
         {
             SendQuery();

@@ -393,3 +393,9 @@ Move right
 Move down
 Move left
 Move up
+Dice Roll: 7
+Move up
+Move left
+Move down
+Move down
+Move right

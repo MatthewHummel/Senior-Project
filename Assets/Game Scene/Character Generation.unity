@@ -524,6 +524,14 @@ MonoBehaviour:
   clearButton: {fileID: 0}
   userTextColor: {r: 0, g: 0, b: 1, a: 1}
   botTextColor: {r: 0, g: 0, b: 0, a: 1}
+  upButton: {fileID: 0}
+  downButton: {fileID: 0}
+  leftButton: {fileID: 0}
+  rightButton: {fileID: 0}
+  upNavText: {fileID: 0}
+  downNavText: {fileID: 0}
+  leftNavText: {fileID: 0}
+  rightNavText: {fileID: 0}
 --- !u!114 &347543088
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3042,6 +3050,7 @@ GameObject:
   - component: {fileID: 1369385367}
   - component: {fileID: 1369385366}
   - component: {fileID: 1369385365}
+  - component: {fileID: 1369385369}
   m_Layer: 5
   m_Name: Canvas
   m_TagString: GameMusic
@@ -3133,6 +3142,19 @@ RectTransform:
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0, y: 0}
+--- !u!114 &1369385369
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1369385364}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6b9c9c29a192276429937591c9079a48, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  image: {fileID: 1925373653}
 --- !u!1 &1372554791
 GameObject:
   m_ObjectHideFlags: 0
@@ -4104,6 +4126,7 @@ GameObject:
   - component: {fileID: 1925373651}
   - component: {fileID: 1925373652}
   - component: {fileID: 1925373653}
+  - component: {fileID: 1925373654}
   m_Layer: 5
   m_Name: Result
   m_TagString: Untagged
@@ -4152,7 +4175,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 0, g: 0, b: 0, a: 1}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_RaycastTarget: 1
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1
@@ -4169,6 +4192,19 @@ MonoBehaviour:
   m_FillOrigin: 0
   m_UseSpriteMesh: 0
   m_PixelsPerUnitMultiplier: 1
+--- !u!114 &1925373654
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1925373650}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ff0cbc537290eac4eac21fba75eb97ee, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  generatedImage: {fileID: 1925373653}
 --- !u!1 &1926900506
 GameObject:
   m_ObjectHideFlags: 0

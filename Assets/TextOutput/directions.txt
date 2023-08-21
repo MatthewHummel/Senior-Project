@@ -328,3 +328,4 @@ User Input: no
 User Input: hi
 User Input: egg
 Dice Roll: 2
+User Input: hi

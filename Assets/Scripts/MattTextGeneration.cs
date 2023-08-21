@@ -14,6 +14,11 @@ namespace HuggingFace.API.Examples
         [SerializeField] private Color userTextColor = Color.blue;
         [SerializeField] private Color botTextColor = Color.black;
 
+        [SerializeField] private Button upButton;
+        [SerializeField] private Button downButton;
+        [SerializeField] private Button leftButton;
+        [SerializeField] private Button rightButton;
+
 
         private TextGenerationTask textGenerationTask = new TextGenerationTask();
 
@@ -68,6 +73,12 @@ namespace HuggingFace.API.Examples
             sendButton.interactable = false;
             inputField.text = "";
 
+            upButton.interactable = false;
+            downButton.interactable = false;
+            leftButton.interactable = false;
+            rightButton.interactable = false;
+
+
             conversationText.text += $"<color=#{userColorHex}>You: {inputText}</color>\n";
             conversationText.text += "Bot is typing...\n";
 
@@ -86,6 +97,12 @@ namespace HuggingFace.API.Examples
                 isWaitingForResponse = false;
                 Canvas.ForceUpdateCanvases();
                 scrollRect.verticalNormalizedPosition = 0f;
+
+                upButton.interactable = true;
+                downButton.interactable = true;
+                leftButton.interactable = true;
+                rightButton.interactable = true;
+
             }, error =>
             {
                 conversationText.text = conversationText.text.TrimEnd("Bot is typing...\n".ToCharArray());
@@ -96,6 +113,12 @@ namespace HuggingFace.API.Examples
                 isWaitingForResponse = false;
                 Canvas.ForceUpdateCanvases();
                 scrollRect.verticalNormalizedPosition = 0f;
+
+                upButton.interactable = true;
+                downButton.interactable = true;
+                leftButton.interactable = true;
+                rightButton.interactable = true;
+
             });
         }
 

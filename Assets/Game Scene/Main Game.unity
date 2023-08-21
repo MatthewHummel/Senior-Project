@@ -1282,6 +1282,10 @@ MonoBehaviour:
   clearButton: {fileID: 2125595158}
   userTextColor: {r: 0, g: 0, b: 1, a: 1}
   botTextColor: {r: 0.07843137, g: 0.34117648, b: 0.1264878, a: 1}
+  upButton: {fileID: 1741430696}
+  downButton: {fileID: 1097825749}
+  leftButton: {fileID: 1339810173}
+  rightButton: {fileID: 1738627860}
 --- !u!114 &598771924
 MonoBehaviour:
   m_ObjectHideFlags: 0

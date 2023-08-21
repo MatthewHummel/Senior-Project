@@ -347,3 +347,13 @@ User Input: hello
 User Input: Did you work!
 User Input: what is your name
 User Input: hi
+Dice Roll: 5
+Move right
+Move up
+Move down
+Move right
+Move left
+Move down
+User Input: hello
+Move right
+Move down

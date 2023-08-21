@@ -17,6 +17,6 @@ public class XMLDeserializer : MonoBehaviour
 
 
         //Debug name to test. 
-        Debug.Log(player.name);
+        Debug.Log("Player name: " + player.name);
     }
 }

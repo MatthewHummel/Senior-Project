@@ -12,4 +12,14 @@ public class XMLOp
         writer.Close();
     }
 
+    public static T Deserialize<T>(string path)
+    {
+        XmlSerializer serializer = new XmlSerializer(typeof(T));
+        StreamReader reader = new StreamReader(path);
+        T deserialized = (T)serializer.Deserialize(reader.BaseStream);
+        reader.Close();
+        return deserialized;
+    }
+
+
 }

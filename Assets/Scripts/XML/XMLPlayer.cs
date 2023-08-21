@@ -13,8 +13,9 @@ public class XMLPlayer
     [XmlIgnore]
     public int hitPoints;
 
-    public int damageTaken;
-
     //The player's stats
+    [XmlElement("PlayerStats")]
     public CharacterStats.Stats characterStats;
+
+    public int damageTaken;
 }

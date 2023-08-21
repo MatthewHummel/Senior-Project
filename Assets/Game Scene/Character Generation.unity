@@ -606,6 +606,7 @@ MonoBehaviour:
   inputField: {fileID: 135450286}
   statusText: {fileID: 553614160}
   generateButton: {fileID: 2003553041}
+  appendText: 
   backupText: {fileID: 6745425}
 --- !u!1 &481088921
 GameObject:
@@ -3560,7 +3561,6 @@ GameObject:
   m_Component:
   - component: {fileID: 1454505604}
   - component: {fileID: 1454505603}
-  - component: {fileID: 1454505602}
   - component: {fileID: 1454505605}
   m_Layer: 0
   m_Name: Main Camera
@@ -3569,14 +3569,6 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!81 &1454505602
-AudioListener:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1454505601}
-  m_Enabled: 1
 --- !u!20 &1454505603
 Camera:
   m_ObjectHideFlags: 0

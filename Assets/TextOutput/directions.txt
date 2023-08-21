@@ -297,3 +297,33 @@ Move left
 Move down
 User Input: 
 Move up
+Dice Roll: 1
+Dice Roll: 6
+Dice Roll: 20
+Dice Roll: 9
+Move right
+Move down
+Move left
+Move up
+User Input: hi
+Dice Roll: 3
+Dice Roll: 14
+Dice Roll: 13
+Move right
+Move left
+Move down
+Move up
+Move right
+Dice Roll: 5
+User Input: hi
+User Input: hi
+User Input: hi
+User Input: hi
+User Input: hi
+User Input: ok
+User Input: ok
+User Input: hi
+User Input: dog
+User Input: no
+User Input: hi
+User Input: egg

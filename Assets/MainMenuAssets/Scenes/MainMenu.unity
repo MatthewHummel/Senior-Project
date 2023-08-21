@@ -1721,7 +1721,6 @@ GameObject:
   - component: {fileID: 186605982}
   - component: {fileID: 186605981}
   - component: {fileID: 186605980}
-  - component: {fileID: 186605984}
   m_Layer: 5
   m_Name: Canvas
   m_TagString: Untagged
@@ -1818,18 +1817,6 @@ RectTransform:
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0, y: 0}
---- !u!114 &186605984
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 186605979}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 89839f53fdc13684cb078b146c2bf33e, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!1 &210584682
 GameObject:
   m_ObjectHideFlags: 0
@@ -4147,7 +4134,6 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 614891878}
-  - component: {fileID: 614891879}
   m_Layer: 0
   m_Name: MenuController
   m_TagString: Untagged
@@ -4170,18 +4156,6 @@ Transform:
   m_Father: {fileID: 2099606270}
   m_RootOrder: -1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &614891879
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 614891877}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 89839f53fdc13684cb078b146c2bf33e, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!1 &627964497
 GameObject:
   m_ObjectHideFlags: 0
@@ -4191,7 +4165,6 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 627964498}
-  - component: {fileID: 627964499}
   m_Layer: 0
   m_Name: MenuController
   m_TagString: Untagged
@@ -4214,18 +4187,6 @@ Transform:
   m_Father: {fileID: 788826147}
   m_RootOrder: -1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &627964499
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 627964497}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 89839f53fdc13684cb078b146c2bf33e, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!1 &695679434
 GameObject:
   m_ObjectHideFlags: 0
@@ -5871,7 +5832,6 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1004742576}
-  - component: {fileID: 1004742577}
   m_Layer: 0
   m_Name: MenuController
   m_TagString: Untagged
@@ -5894,18 +5854,6 @@ Transform:
   m_Father: {fileID: 1117625768}
   m_RootOrder: -1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &1004742577
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1004742575}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 89839f53fdc13684cb078b146c2bf33e, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!1 &1013786961
 GameObject:
   m_ObjectHideFlags: 0
@@ -9069,7 +9017,6 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1475299261}
-  - component: {fileID: 1475299262}
   m_Layer: 0
   m_Name: MenuController
   m_TagString: Untagged
@@ -9092,18 +9039,6 @@ Transform:
   m_Father: {fileID: 982080682}
   m_RootOrder: -1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &1475299262
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1475299260}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 89839f53fdc13684cb078b146c2bf33e, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!1 &1488745869
 GameObject:
   m_ObjectHideFlags: 0
@@ -9642,7 +9577,6 @@ GameObject:
   - component: {fileID: 1542030697}
   - component: {fileID: 1542030699}
   - component: {fileID: 1542030698}
-  - component: {fileID: 1542030700}
   m_Layer: 5
   m_Name: MainMenuContainer
   m_TagString: Untagged
@@ -9711,18 +9645,6 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1542030696}
   m_CullTransparentMesh: 1
---- !u!114 &1542030700
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1542030696}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 89839f53fdc13684cb078b146c2bf33e, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!1 &1557359169
 GameObject:
   m_ObjectHideFlags: 0

@@ -1,6 +1,7 @@
 using UnityEngine;
 using UnityEngine.UI;
 using TMPro;
+using System.IO;
 
 namespace HuggingFace.API.Examples {
     public class TextToImageExample : MonoBehaviour {
@@ -12,7 +13,7 @@ namespace HuggingFace.API.Examples {
         private string normalColorHex;
         private string errorColorHex;
         private bool isWaitingForResponse;
-
+        public string appendText;
         public TMP_Text backupText;
 
         private void Awake() {
@@ -44,7 +45,7 @@ namespace HuggingFace.API.Examples {
             if (string.IsNullOrEmpty(inputText)) {
                 return;
             }
-
+            appendText = "mdjrny-v4 style " + inputField.text;
             backupText.text = inputField.text;
 
             statusText.text = $"<color=#{normalColorHex}>Generating...</color>";
@@ -63,6 +64,18 @@ namespace HuggingFace.API.Examples {
                 inputField.interactable = true;
                 generateButton.interactable = true;
                 inputField.ActivateInputField();
+                string folderPath = Path.Combine(Application.persistentDataPath, "TextOutput");
+                Directory.CreateDirectory(folderPath);
+                string imagePath = Path.Combine(folderPath, "GeneratedImage.png");
+
+                //Debug the paths
+                Debug.Log($"Application.persistentDataPath: {Application.persistentDataPath}");
+                Debug.Log($"Folder Path: {folderPath}");
+                Debug.Log($"Image Path: {imagePath}");
+
+                // Write the image bytes to the file
+                byte[] pngBytes = texture.EncodeToPNG();
+                File.WriteAllBytes(imagePath, pngBytes);
             }, error => {
                 statusText.text = $"<color=#{errorColorHex}>Error: {error}</color>";
                 isWaitingForResponse = false;

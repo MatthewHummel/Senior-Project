@@ -327,3 +327,4 @@ User Input: dog
 User Input: no
 User Input: hi
 User Input: egg
+Dice Roll: 2

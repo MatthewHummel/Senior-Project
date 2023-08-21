@@ -328,4 +328,21 @@ User Input: no
 User Input: hi
 User Input: egg
 Dice Roll: 2
-User Input: hi
+Dice Roll: 18
+Dice Roll: 18
+Dice Roll: 1
+Dice Roll: 3
+Dice Roll: 19
+Dice Roll: 4
+Dice Roll: 5
+Dice Roll: 15
+Dice Roll: 12
+Dice Roll: 17
+Dice Roll: 7
+Dice Roll: 10
+Dice Roll: 13
+Dice Roll: 6
+Dice Roll: 16
+User Input: hello
+User Input: Did you work!
+User Input: what is your name

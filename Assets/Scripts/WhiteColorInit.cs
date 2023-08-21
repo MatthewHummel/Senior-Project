@@ -10,6 +10,14 @@ public class WhiteColorInit : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        generatedImage.color = Color.white;
+
+        if (generatedImage == null)
+        {
+
+        }
+        else
+        {
+            generatedImage.color = Color.white;
+        }
     }
 }

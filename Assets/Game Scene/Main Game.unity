@@ -1552,7 +1552,6 @@ MonoBehaviour:
   downButton: {fileID: 1097825749}
   leftButton: {fileID: 1339810173}
   rightButton: {fileID: 1738627860}
-  navText: {fileID: 1036476394}
 --- !u!114 &598771924
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2616,18 +2615,18 @@ RectTransform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1043143024}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: -0}
+  m_LocalScale: {x: 0.3459895, y: 0.3459895, z: 0.3459895}
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 870822081}
-  m_Father: {fileID: 1885263847}
-  m_RootOrder: 2
+  m_Father: {fileID: 1512305489}
+  m_RootOrder: -1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 1, y: 0}
   m_AnchorMax: {x: 1, y: 0}
-  m_AnchoredPosition: {x: -542.05, y: 834}
+  m_AnchoredPosition: {x: -352.758, y: 429.08008}
   m_SizeDelta: {x: 241.272, y: 251.7}
   m_Pivot: {x: 1, y: 0}
 --- !u!114 &1043143026
@@ -3324,6 +3323,7 @@ RectTransform:
   - {fileID: 2049957640}
   - {fileID: 1885263847}
   - {fileID: 1588340502}
+  - {fileID: 1043143025}
   m_Father: {fileID: 1524224371}
   m_RootOrder: -1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -5120,7 +5120,6 @@ RectTransform:
   m_Children:
   - {fileID: 1021805389}
   - {fileID: 1036476393}
-  - {fileID: 1043143025}
   - {fileID: 2125595157}
   m_Father: {fileID: 1512305489}
   m_RootOrder: -1

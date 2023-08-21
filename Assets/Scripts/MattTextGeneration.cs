@@ -19,6 +19,11 @@ namespace HuggingFace.API.Examples
         [SerializeField] private Button leftButton;
         [SerializeField] private Button rightButton;
 
+        [SerializeField] private TMP_InputField upNavText;
+        [SerializeField] private TMP_InputField downNavText;
+        [SerializeField] private TMP_InputField leftNavText;
+        [SerializeField] private TMP_InputField rightNavText;
+
 
         private TextGenerationTask textGenerationTask = new TextGenerationTask();
 
@@ -47,6 +52,32 @@ namespace HuggingFace.API.Examples
         {
             SendQuery();
         }
+
+        public void UpNavButtonClicked()
+        {
+            upNavText.text = "I navigate forward.";
+            SendQuery();
+        }
+
+        public void DownNavButtonClicked()
+        {
+            upNavText.text = "I navigate backwards.";
+            SendQuery();
+        }
+
+        public void LeftNavButtonClicked()
+        {
+            upNavText.text = "I navigate to the left.";
+            SendQuery();
+        }
+
+        public void RightNavButtonClicked()
+        {
+            upNavText.text = "I navigate to the right.";
+            SendQuery();
+        }
+
+
 
         private void OnInputFieldEndEdit(string text)
         {

@@ -6,8 +6,10 @@ using TMPro;
 
 public class OptionControl : MonoBehaviour
 {
+    // References to UI toggles for fullscreen and vsync options
     public Toggle fullscreenTog, vsyncTog;
 
+    // List to store different resolutions
     public List<ResItem> resolutions = new List<ResItem>();
     private int selectedResolution;
     public TMP_Text resolutionLabel;
@@ -16,8 +18,10 @@ public class OptionControl : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
+        // Set the fullscreen toggle based on the current fullscreen mode
         fullscreenTog.isOn = Screen.fullScreen;
 
+        // Set the vsync toggle based on the current vsync count
         if (QualitySettings.vSyncCount == 0)
         {
             vsyncTog.isOn = false;
@@ -26,10 +30,12 @@ public class OptionControl : MonoBehaviour
             vsyncTog.isOn = true;
         }
 
+        // Check if the current screen resolution matches any resolution in the list
         bool foundRes = false;
         for(int i = 0; i < resolutions.Count; i++)
         {
-            if(Screen.width == resolutions[i].horizontal && Screen.height == resolutions[i].vertical)
+            // If the current resolution is not found in the list, add it
+            if (Screen.width == resolutions[i].horizontal && Screen.height == resolutions[i].vertical)
             {
                 foundRes = true;
 
@@ -58,6 +64,7 @@ public class OptionControl : MonoBehaviour
         
     }
 
+    // Function to select the previous resolution
     public void ResLeft()
     {
         selectedResolution--;
@@ -68,6 +75,7 @@ public class OptionControl : MonoBehaviour
         UpdateResLabel();
     }
 
+    // Function to select the next resolution
     public void ResRight()
     {
         selectedResolution++;
@@ -78,10 +86,12 @@ public class OptionControl : MonoBehaviour
         UpdateResLabel();
     }
 
-public void UpdateResLabel(){
+    // Function to update the resolution label
+    public void UpdateResLabel(){
     resolutionLabel.text = resolutions[selectedResolution].horizontal.ToString() + " x " + resolutions[selectedResolution].vertical.ToString();
 }
 
+    // Function to apply graphics settings
     public void ApplyGraphics()
     {
         //Screen.fullScreen = fullscreenTog.isOn;
@@ -94,6 +104,7 @@ public void UpdateResLabel(){
         {
             QualitySettings.vSyncCount = 0;
         }
+        // Apply the selected resolution and fullscreen setting
         Screen.SetResolution(resolutions[selectedResolution].horizontal, resolutions[selectedResolution].vertical, fullscreenTog.isOn);
     }
 }

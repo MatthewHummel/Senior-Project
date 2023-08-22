@@ -114,3 +114,10 @@ Move left
 Move down
 Move left
 Move down
+Dice Roll: 2
+Dice Roll: 10
+Dice Roll: 17
+Dice Roll: 17
+Dice Roll: 16
+Dice Roll: 9
+Dice Roll: 11

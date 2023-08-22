@@ -26,6 +26,8 @@ namespace OpenAI
         [SerializeField] private Button rightButton;
 
         [SerializeField] private string parsedOutput;
+
+        public ButtonController dice;
  
 
         //Fields to store the player's name and selected class
@@ -508,6 +510,127 @@ namespace OpenAI
             string cleanedOutput = parsedOutput.Replace(inputText, "");
             cleanedOutput.Replace("\n", "");
 
+
+            //this happens after we get a response
+            conversationText.text = conversationText.text.TrimEnd("Bot is typing...\n".ToCharArray());
+            conversationText.text += $"\n<color=#{botColorHex}>Bot: {cleanedOutput}</color>\n\n";
+            inputField.interactable = true;
+            sendButton.interactable = true;
+            inputField.ActivateInputField();
+            isWaitingForResponse = false;
+            Canvas.ForceUpdateCanvases();
+            scrollRect.verticalNormalizedPosition = 0f;
+
+            upButton.interactable = true;
+            downButton.interactable = true;
+            leftButton.interactable = true;
+            rightButton.interactable = true;
+        }
+
+
+        public async void SendAttackQuery()
+        {
+            if (isWaitingForResponse) return;
+
+            //the text to be sent
+            string inputText = "I attack.";
+
+            isWaitingForResponse = true;
+            inputField.interactable = false;
+            sendButton.interactable = false;
+            inputField.text = "";
+
+            upButton.interactable = false;
+            downButton.interactable = false;
+            leftButton.interactable = false;
+            rightButton.interactable = false;
+
+
+            conversationText.text += $"<color=#{userColorHex}>You: {inputText}</color>\n";
+            conversationText.text += "Bot is typing...\n";
+
+            Canvas.ForceUpdateCanvases();
+            scrollRect.verticalNormalizedPosition = 0f;
+
+            //api call
+            var openai = new OpenAIApi("not needed for a local LLM");
+            var request = new CreateCompletionRequest
+            {
+                Model = "ggml-model-gpt4all-falcon-q4_0",
+                Prompt = inputText,
+                MaxTokens = 100,
+                Temperature = 0.28f,
+                TopP = 0.95f,
+                N = 1,
+                Echo = true,
+                Stream = false
+            };
+
+            var response = await openai.CreateCompletion(request);
+
+            parsedOutput = response.Choices[0].Text;
+            string cleanedOutput = parsedOutput.Replace(inputText, "");
+            cleanedOutput.Replace("\n", "");
+
+            //this happens after we get a response
+            conversationText.text = conversationText.text.TrimEnd("Bot is typing...\n".ToCharArray());
+            conversationText.text += $"\n<color=#{botColorHex}>Bot: {cleanedOutput}</color>\n\n";
+            inputField.interactable = true;
+            sendButton.interactable = true;
+            inputField.ActivateInputField();
+            isWaitingForResponse = false;
+            Canvas.ForceUpdateCanvases();
+            scrollRect.verticalNormalizedPosition = 0f;
+
+            upButton.interactable = true;
+            downButton.interactable = true;
+            leftButton.interactable = true;
+            rightButton.interactable = true;
+        }
+
+        public async void SendDiceQuery()
+        {
+            if (isWaitingForResponse) return;
+
+            //the text to be sent
+            string inputText = "I roll a " + dice.GeneratedRandomNumber.ToString();
+
+            isWaitingForResponse = true;
+            inputField.interactable = false;
+            sendButton.interactable = false;
+            inputField.text = "";
+
+            upButton.interactable = false;
+            downButton.interactable = false;
+            leftButton.interactable = false;
+            rightButton.interactable = false;
+
+
+            conversationText.text += $"<color=#{userColorHex}>You: {inputText}</color>\n";
+            conversationText.text += "Bot is typing...\n";
+
+            Canvas.ForceUpdateCanvases();
+            scrollRect.verticalNormalizedPosition = 0f;
+
+            //api call
+            var openai = new OpenAIApi("not needed for a local LLM");
+            var request = new CreateCompletionRequest
+            {
+                Model = "ggml-model-gpt4all-falcon-q4_0",
+                Prompt = inputText,
+                MaxTokens = 100,
+                Temperature = 0.28f,
+                TopP = 0.95f,
+                N = 1,
+                Echo = true,
+                Stream = false
+            };
+
+            var response = await openai.CreateCompletion(request);
+
+            parsedOutput = response.Choices[0].Text;
+            string cleanedOutput = parsedOutput.Replace(inputText, "");
+            cleanedOutput.Replace("\n", "");
 
             //this happens after we get a response
             conversationText.text = conversationText.text.TrimEnd("Bot is typing...\n".ToCharArray());

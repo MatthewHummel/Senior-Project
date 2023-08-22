@@ -28,7 +28,7 @@ namespace HuggingFace.API.Examples
         //[SerializeField] private TMP_InputField navText;
 
         //Reference to ButtonController script
-        public ButtonController buttonController;
+        public ButtonController dice;
 
         //Fields to store the player's name and selected class
         private string classText;
@@ -382,7 +382,8 @@ namespace HuggingFace.API.Examples
             downButton.interactable = false;
             leftButton.interactable = false;
             rightButton.interactable = false;
-
+            attackButton.interactable = false;
+            diceButton.interactable = false;
 
             conversationText.text += $"<color=#{userColorHex}>You: {inputText}</color>\n";
             conversationText.text += "Bot is typing...\n";
@@ -407,6 +408,8 @@ namespace HuggingFace.API.Examples
                 downButton.interactable = true;
                 leftButton.interactable = true;
                 rightButton.interactable = true;
+                attackButton.interactable = true;
+                diceButton.interactable = true;
 
             }, error =>
             {
@@ -423,7 +426,8 @@ namespace HuggingFace.API.Examples
                 downButton.interactable = true;
                 leftButton.interactable = true;
                 rightButton.interactable = true;
-
+                attackButton.interactable = true;
+                diceButton.interactable = true;
             });
 
         }
@@ -568,6 +572,8 @@ namespace HuggingFace.API.Examples
                 downButton.interactable = true;
                 leftButton.interactable = true;
                 rightButton.interactable = true;
+                diceButton.interactable = true;
+                attackButton.interactable = true;
 
             });
 
@@ -647,7 +653,7 @@ namespace HuggingFace.API.Examples
             if (isWaitingForResponse) return;
 
             //the user-entered text
-            string inputText = "I roll a " + randomValue + ".";
+            string inputText = "I roll a " + dice.GeneratedRandomNumber.ToString() + ".";
 
             isWaitingForResponse = true;
             inputField.interactable = false;

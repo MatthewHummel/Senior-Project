@@ -1,14 +1,14 @@
 <?xml version="1.0"?>
 <Player xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" player="true">
-  <name>Percy</name>
+  <name>Greg</name>
   <PlayerStats>
-    <vitality>4</vitality>
-    <defense>6</defense>
-    <strength>2</strength>
-    <intelligence>3</intelligence>
-    <dexterity>9</dexterity>
-    <charisma>3</charisma>
-    <sneak>9</sneak>
+    <vitality>10</vitality>
+    <defense>10</defense>
+    <strength>6</strength>
+    <intelligence>2</intelligence>
+    <dexterity>3</dexterity>
+    <charisma>6</charisma>
+    <sneak>3</sneak>
   </PlayerStats>
   <damageTaken>3</damageTaken>
 </Player>

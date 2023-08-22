@@ -1022,7 +1022,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -495, y: -215}
+  m_AnchoredPosition: {x: -461.4, y: -210}
   m_SizeDelta: {x: 232.832, y: 46.599}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &512464929
@@ -1404,6 +1404,8 @@ MonoBehaviour:
   downButton: {fileID: 1097825749}
   leftButton: {fileID: 1738627860}
   rightButton: {fileID: 1339810173}
+  attackButton: {fileID: 2037594025}
+  diceButton: {fileID: 1778250317}
   parsedOutput: 
   dice: {fileID: 1512305493}
   isWaitingForResponse: 0
@@ -4502,7 +4504,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -492.9899, y: 33.00003}
+  m_AnchoredPosition: {x: -461.4, y: 28.515}
   m_SizeDelta: {x: 296.0202, y: 57.0307}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1738927557
@@ -4797,7 +4799,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -495.00006, y: -93}
+  m_AnchoredPosition: {x: -461.4, y: -95}
   m_SizeDelta: {x: 150, y: 160}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1778250317

@@ -1375,7 +1375,7 @@ MonoBehaviour:
   rightButton: {fileID: 1738627860}
   attackButton: {fileID: 1463496933}
   diceButton: {fileID: 1778250317}
-  buttonController: {fileID: 0}
+  dice: {fileID: 1512305493}
 --- !u!114 &598771924
 MonoBehaviour:
   m_ObjectHideFlags: 0

@@ -24,7 +24,8 @@ namespace OpenAI
         [SerializeField] private Button downButton;
         [SerializeField] private Button leftButton;
         [SerializeField] private Button rightButton;
-
+        [SerializeField] private Button attackButton;
+        [SerializeField] private Button diceButton;
         [SerializeField] private string parsedOutput;
 
         public ButtonController dice;
@@ -151,6 +152,8 @@ namespace OpenAI
             downButton.interactable = false;
             leftButton.interactable = false;
             rightButton.interactable = false;
+            attackButton.interactable = false;
+            diceButton.interactable = false;
 
             conversationText.text += $"<color=#{userColorHex}>You: {inputText}</color>\n";
             conversationText.text += "Bot is typing...\n";
@@ -220,6 +223,8 @@ namespace OpenAI
             downButton.interactable = true;
             leftButton.interactable = true;
             rightButton.interactable = true;
+            attackButton.interactable = true;
+            diceButton.interactable = true;
 
         }
 
@@ -240,6 +245,8 @@ namespace OpenAI
             downButton.interactable = false;
             leftButton.interactable = false;
             rightButton.interactable = false;
+            attackButton.interactable = false;
+            diceButton.interactable = false;
 
 
             //conversationText.text += $"<color=#{userColorHex}>You: {inputText}</color>\n";
@@ -283,6 +290,8 @@ namespace OpenAI
             downButton.interactable = true;
             leftButton.interactable = true;
             rightButton.interactable = true;
+            attackButton.interactable = true;
+            diceButton.interactable = true;
         }
 
 
@@ -302,6 +311,8 @@ namespace OpenAI
             downButton.interactable = false;
             leftButton.interactable = false;
             rightButton.interactable = false;
+            attackButton.interactable = false;
+            diceButton.interactable = false;
 
 
             conversationText.text += $"<color=#{userColorHex}>You: {inputText}</color>\n";
@@ -344,6 +355,8 @@ namespace OpenAI
             downButton.interactable = true;
             leftButton.interactable = true;
             rightButton.interactable = true;
+            attackButton.interactable = true;
+            diceButton.interactable = true;
         }
 
         public async void SendDownQuery()
@@ -362,6 +375,8 @@ namespace OpenAI
             downButton.interactable = false;
             leftButton.interactable = false;
             rightButton.interactable = false;
+            attackButton.interactable = false;
+            diceButton.interactable = false;
 
 
             conversationText.text += $"<color=#{userColorHex}>You: {inputText}</color>\n";
@@ -404,6 +419,8 @@ namespace OpenAI
             downButton.interactable = true;
             leftButton.interactable = true;
             rightButton.interactable = true;
+            attackButton.interactable = true;
+            diceButton.interactable = true;
         }
 
         public async void SendLeftQuery()
@@ -422,6 +439,8 @@ namespace OpenAI
             downButton.interactable = false;
             leftButton.interactable = false;
             rightButton.interactable = false;
+            attackButton.interactable = false;
+            diceButton.interactable = false;
 
 
             conversationText.text += $"<color=#{userColorHex}>You: {inputText}</color>\n";
@@ -464,6 +483,9 @@ namespace OpenAI
             downButton.interactable = true;
             leftButton.interactable = true;
             rightButton.interactable = true;
+            attackButton.interactable = true;
+            diceButton.interactable = true;
+
         }
 
         public async void SendRightQuery()
@@ -482,6 +504,8 @@ namespace OpenAI
             downButton.interactable = false;
             leftButton.interactable = false;
             rightButton.interactable = false;
+            attackButton.interactable = false;
+            diceButton.interactable = false;
 
 
             conversationText.text += $"<color=#{userColorHex}>You: {inputText}</color>\n";
@@ -525,6 +549,8 @@ namespace OpenAI
             downButton.interactable = true;
             leftButton.interactable = true;
             rightButton.interactable = true;
+            attackButton.interactable = true;
+            diceButton.interactable = true;
         }
 
 
@@ -544,6 +570,8 @@ namespace OpenAI
             downButton.interactable = false;
             leftButton.interactable = false;
             rightButton.interactable = false;
+            attackButton.interactable = false;
+            diceButton.interactable = false;
 
 
             conversationText.text += $"<color=#{userColorHex}>You: {inputText}</color>\n";
@@ -586,6 +614,8 @@ namespace OpenAI
             downButton.interactable = true;
             leftButton.interactable = true;
             rightButton.interactable = true;
+            attackButton.interactable = true;
+            diceButton.interactable = true;
         }
 
         public async void SendDiceQuery()
@@ -593,7 +623,7 @@ namespace OpenAI
             if (isWaitingForResponse) return;
 
             //the text to be sent
-            string inputText = "I roll a " + dice.GeneratedRandomNumber.ToString();
+            string inputText = "I roll a " + dice.GeneratedRandomNumber.ToString() + ".";
 
             isWaitingForResponse = true;
             inputField.interactable = false;
@@ -604,6 +634,8 @@ namespace OpenAI
             downButton.interactable = false;
             leftButton.interactable = false;
             rightButton.interactable = false;
+            attackButton.interactable = false;
+            diceButton.interactable = false;
 
 
             conversationText.text += $"<color=#{userColorHex}>You: {inputText}</color>\n";
@@ -646,6 +678,8 @@ namespace OpenAI
             downButton.interactable = true;
             leftButton.interactable = true;
             rightButton.interactable = true;
+            attackButton.interactable = true;
+            diceButton.interactable = true;
         }
 
 

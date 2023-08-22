@@ -121,3 +121,38 @@ Dice Roll: 17
 Dice Roll: 16
 Dice Roll: 9
 Dice Roll: 11
+Move right
+User Input: sfefs
+User Input: 
+User Input: 
+User Input: sfse fesf sefesf sef
+User Input: uahwiodh jhaiwjdia jiawdjioa jdoiawjd aiwjdioawjd aiwjdioawjdo awjdioawdjioaw jiaowidjoiajwd ajwiodoiwajdi oajiwiodjioawjd aijwiodiawjd
+User Input: dfsef
+Dice Roll: 18
+Dice Roll: 12
+Dice Roll: 20
+Dice Roll: 8
+Dice Roll: 15
+Dice Roll: 18
+Dice Roll: 6
+Dice Roll: 5
+Dice Roll: 16
+Dice Roll: 15
+Dice Roll: 7
+Dice Roll: 20
+Dice Roll: 4
+Move up
+Dice Roll: 8
+Dice Roll: 8
+Dice Roll: 8
+Dice Roll: 7
+Dice Roll: 19
+Dice Roll: 7
+Dice Roll: 2
+Dice Roll: 6
+Dice Roll: 7
+Dice Roll: 1
+Dice Roll: 12
+Dice Roll: 8
+Dice Roll: 20
+Dice Roll: 7

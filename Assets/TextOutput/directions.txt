@@ -42,3 +42,68 @@ Move down
 Move down
 Move down
 Move right
+User Input: hello there
+Move up
+Move up
+Move left
+Move down
+User Input: Hello
+User Input: Hello
+User Input: Hello
+User Input: Hello
+User Input: Hello
+User Input: Hello
+Move up
+Move up
+Move up
+Move up
+Move up
+Move right
+User Input: Hello
+User Input: Hello
+User Input: Hello
+User Input: Hello
+User Input: Hello
+User Input: Hello
+User Input: hi
+User Input: hi
+Dice Roll: 7
+Move up
+Move right
+Move down
+Move left
+User Input: hello
+User Input: hi
+Dice Roll: 17
+User Input: hello
+User Input: Hello
+User Input: Hello
+User Input: hi
+User Input: hi
+User Input: hi
+User Input: Hello
+Move left
+Move left
+Move left
+Move right
+Move down
+Move up
+Move right
+Move down
+User Input: hi
+User Input: hi
+User Input: hi
+User Input: hi
+User Input: hi
+User Input: hi
+User Input: hi
+User Input: hello
+User Input: What color is your favorite?
+User Input: hi
+User Input: Hello
+User Input: hi
+User Input: hi
+User Input: Do you know what D&D is?
+User Input: Do you know what D&D is?
+Move up
+Move up

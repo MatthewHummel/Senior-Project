@@ -459,6 +459,7 @@ namespace HuggingFace.API.Examples
 
         }
 
+        //logic for the inital query that is sent to the model
         private void SendInitialQuery()
         {
             if (isWaitingForResponse) return;

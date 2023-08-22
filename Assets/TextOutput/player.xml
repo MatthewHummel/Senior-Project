@@ -1,14 +1,14 @@
 <?xml version="1.0"?>
 <Player xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" player="true">
-  <name>sam</name>
+  <name>Percy</name>
   <PlayerStats>
-    <vitality>3</vitality>
-    <defense>3</defense>
-    <strength>4</strength>
-    <intelligence>5</intelligence>
-    <dexterity>7</dexterity>
+    <vitality>4</vitality>
+    <defense>6</defense>
+    <strength>2</strength>
+    <intelligence>3</intelligence>
+    <dexterity>9</dexterity>
     <charisma>3</charisma>
-    <sneak>4</sneak>
+    <sneak>9</sneak>
   </PlayerStats>
   <damageTaken>3</damageTaken>
 </Player>

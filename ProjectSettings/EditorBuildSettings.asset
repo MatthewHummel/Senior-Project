@@ -12,6 +12,9 @@ EditorBuildSettings:
     path: Assets/Game Scene/MainMenu.unity
     guid: 6087fd66024ff00428be5aaedb3016c0
   - enabled: 1
+    path: Assets/Game Scene/Choose your mode.unity
+    guid: 4a895db470d3a1345bf307e5207894e8
+  - enabled: 1
     path: Assets/Game Scene/Character Generation.unity
     guid: f02d84d681b2ef244b272f6dcd3f58af
   - enabled: 1
@@ -21,6 +24,9 @@ EditorBuildSettings:
     path: Assets/Game Scene/GeneratedCharacterStuff.unity
     guid: 3069e2a505e6d854ba9f9377bd09a8c4
   - enabled: 1
-    path: Assets/Game Scene/Main Game.unity
+    path: Assets/Game Scene/InferenceAPIGame.unity
     guid: b941a98940a04ed408982acae35154ad
+  - enabled: 1
+    path: Assets/Game Scene/GPT4ALL.unity
+    guid: 38213174ec396ee438c120ee23f38e4c
   m_configObjects: {}

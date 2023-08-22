@@ -30,6 +30,19 @@ public GameObject optionsScreen;
     {
         SceneManager.LoadScene(sceneName);
     }
+
+    public void LoadLocalEnvironment()
+    {
+        if (SceneManager.GetActiveScene().buildIndex == 4 && modeTracker.Instance.localMode == true)
+        {
+            SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 2);
+        }
+        else
+        {
+            SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
+        }
+    }
+
     public void OpenOptions()
     {
         optionsScreen.SetActive(true);

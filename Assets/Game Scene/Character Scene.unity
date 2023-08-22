@@ -1454,7 +1454,7 @@ MonoBehaviour:
   m_CharacterValidation: 0
   m_RegexValue: 
   m_GlobalPointSize: 30
-  m_CharacterLimit: 0
+  m_CharacterLimit: 14
   m_OnEndEdit:
     m_PersistentCalls:
       m_Calls: []
@@ -3053,6 +3053,13 @@ MonoBehaviour:
   clearButton: {fileID: 0}
   userTextColor: {r: 0, g: 0, b: 1, a: 1}
   botTextColor: {r: 0, g: 0, b: 0, a: 1}
+  upButton: {fileID: 0}
+  downButton: {fileID: 0}
+  leftButton: {fileID: 0}
+  rightButton: {fileID: 0}
+  attackButton: {fileID: 0}
+  diceButton: {fileID: 0}
+  dice: {fileID: 0}
 --- !u!114 &1517258866
 MonoBehaviour:
   m_ObjectHideFlags: 0

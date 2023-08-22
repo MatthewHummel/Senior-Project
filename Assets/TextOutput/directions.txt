@@ -107,3 +107,10 @@ User Input: Do you know what D&D is?
 User Input: Do you know what D&D is?
 Move up
 Move up
+Dice Roll: 16
+Move right
+Move up
+Move left
+Move down
+Move left
+Move down

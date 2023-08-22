@@ -21,14 +21,19 @@ namespace HuggingFace.API.Examples
         [SerializeField] private Button downButton;
         [SerializeField] private Button leftButton;
         [SerializeField] private Button rightButton;
+        [SerializeField] private Button attackButton;
+        [SerializeField] private Button diceButton;
 
         //Unused field that was used to send text to the input field when working on Button Navigation
         //[SerializeField] private TMP_InputField navText;
 
+        //Reference to ButtonController script
+        public ButtonController buttonController;
+
         //Fields to store the player's name and selected class
         private string classText;
         private string nameText;
-
+        private int randomValue;
         //Init task
         private TextGenerationTask textGenerationTask = new TextGenerationTask();
 
@@ -55,6 +60,7 @@ namespace HuggingFace.API.Examples
             }
             //Get the name of the player
             nameText = CharacterScene.characterscene.player_name;
+ 
         }
 
         private void Start()
@@ -68,7 +74,9 @@ namespace HuggingFace.API.Examples
             SendInitialQuery();
         }
 
-       //Make arrow keys on keyboard work for movement.
+
+
+       //Make arrow keys and on keyboard work for movement.
         private void Update()
         {
             if (Input.GetKeyDown(KeyCode.LeftArrow))
@@ -118,6 +126,16 @@ namespace HuggingFace.API.Examples
             //navText.text = "I navigate to the right.";
             SendRightQuery();
         }
+        public void AttackButtonClicked()
+        {
+            //navText.text = "I attack.";
+            SendAttackQuery();
+        }
+        public void RollButtonClicked()
+        {
+            //navText.text = "I roll a " + num + ".";
+            SendDiceQuery();
+        }
 
         //Sends the query if the user clicks enter/return
         private void OnInputFieldEndEdit(string text)
@@ -149,7 +167,8 @@ namespace HuggingFace.API.Examples
             downButton.interactable = false;
             leftButton.interactable = false;
             rightButton.interactable = false;
-
+            attackButton.interactable = false;
+            diceButton.interactable = false;
 
             conversationText.text += $"<color=#{userColorHex}>You: {inputText}</color>\n";
             conversationText.text += "Bot is typing...\n";
@@ -174,6 +193,8 @@ namespace HuggingFace.API.Examples
                 downButton.interactable = true;
                 leftButton.interactable = true;
                 rightButton.interactable = true;
+                attackButton.interactable = true;
+                diceButton.interactable = true;
 
             }, error =>
             {
@@ -190,6 +211,8 @@ namespace HuggingFace.API.Examples
                 downButton.interactable = true;
                 leftButton.interactable = true;
                 rightButton.interactable = true;
+                attackButton.interactable = true;
+                diceButton.interactable = true;
 
             });
 
@@ -212,7 +235,9 @@ namespace HuggingFace.API.Examples
             downButton.interactable = false;
             leftButton.interactable = false;
             rightButton.interactable = false;
-
+            attackButton.interactable = false;
+            diceButton.interactable = false;
+            attackButton.interactable = false;
 
             conversationText.text += $"<color=#{userColorHex}>You: {inputText}</color>\n";
             conversationText.text += "Bot is typing...\n";
@@ -237,6 +262,9 @@ namespace HuggingFace.API.Examples
                 downButton.interactable = true;
                 leftButton.interactable = true;
                 rightButton.interactable = true;
+                attackButton.interactable = true;
+                diceButton.interactable = true;
+
 
             }, error =>
             {
@@ -253,6 +281,8 @@ namespace HuggingFace.API.Examples
                 downButton.interactable = true;
                 leftButton.interactable = true;
                 rightButton.interactable = true;
+                attackButton.interactable = true;
+                diceButton.interactable = true;
 
             });
 
@@ -279,6 +309,8 @@ namespace HuggingFace.API.Examples
             downButton.interactable = false;
             leftButton.interactable = false;
             rightButton.interactable = false;
+            diceButton.interactable = false;
+            attackButton.interactable = false;
 
 
             conversationText.text += $"<color=#{userColorHex}>You: {inputText}</color>\n";
@@ -304,6 +336,8 @@ namespace HuggingFace.API.Examples
                 downButton.interactable = true;
                 leftButton.interactable = true;
                 rightButton.interactable = true;
+                attackButton.interactable = true;
+                diceButton.interactable = true;
 
             }, error =>
             {
@@ -320,6 +354,8 @@ namespace HuggingFace.API.Examples
                 downButton.interactable = true;
                 leftButton.interactable = true;
                 rightButton.interactable = true;
+                attackButton.interactable = true;
+                diceButton.interactable = true;
 
             });
 
@@ -413,6 +449,8 @@ namespace HuggingFace.API.Examples
             downButton.interactable = false;
             leftButton.interactable = false;
             rightButton.interactable = false;
+            diceButton.interactable = false;
+            attackButton.interactable = false;
 
 
             conversationText.text += $"<color=#{userColorHex}>You: {inputText}</color>\n";
@@ -438,6 +476,8 @@ namespace HuggingFace.API.Examples
                 downButton.interactable = true;
                 leftButton.interactable = true;
                 rightButton.interactable = true;
+                attackButton.interactable = true;
+                diceButton.interactable = true;
 
             }, error =>
             {
@@ -454,6 +494,8 @@ namespace HuggingFace.API.Examples
                 downButton.interactable = true;
                 leftButton.interactable = true;
                 rightButton.interactable = true;
+                attackButton.interactable = true;
+                diceButton.interactable = true;
 
             });
 
@@ -481,6 +523,8 @@ namespace HuggingFace.API.Examples
             downButton.interactable = false;
             leftButton.interactable = false;
             rightButton.interactable = false;
+            diceButton.interactable = false;
+            attackButton.interactable = false;
 
 
             conversationText.text += $"<color=#{userColorHex}>You: {inputText}</color>\n";
@@ -506,6 +550,8 @@ namespace HuggingFace.API.Examples
                 downButton.interactable = true;
                 leftButton.interactable = true;
                 rightButton.interactable = true;
+                attackButton.interactable = true;
+                diceButton.interactable = true;
 
             }, error =>
             {
@@ -526,7 +572,144 @@ namespace HuggingFace.API.Examples
             });
 
         }
+        //logic for the query sent when using the attack button
+        public void SendAttackQuery()
+        {
+            if (isWaitingForResponse) return;
 
+            //the user-entered text
+            string inputText = "I attack.";
+
+            isWaitingForResponse = true;
+            inputField.interactable = false;
+            sendButton.interactable = false;
+            inputField.text = "";
+
+            upButton.interactable = false;
+            downButton.interactable = false;
+            leftButton.interactable = false;
+            rightButton.interactable = false;
+            attackButton.interactable = false;
+            diceButton.interactable = false;
+            attackButton.interactable = false;
+
+            conversationText.text += $"<color=#{userColorHex}>You: {inputText}</color>\n";
+            conversationText.text += "Bot is typing...\n";
+
+            Canvas.ForceUpdateCanvases();
+            scrollRect.verticalNormalizedPosition = 0f;
+
+
+            HuggingFaceAPI.TextGeneration(inputText, response =>
+            {
+                //string reply = response;
+                conversationText.text = conversationText.text.TrimEnd("Bot is typing...\n".ToCharArray());
+                conversationText.text += $"\n<color=#{botColorHex}>Bot: {response}</color>\n\n";
+                inputField.interactable = true;
+                sendButton.interactable = true;
+                inputField.ActivateInputField();
+                isWaitingForResponse = false;
+                Canvas.ForceUpdateCanvases();
+                scrollRect.verticalNormalizedPosition = 0f;
+
+                upButton.interactable = true;
+                downButton.interactable = true;
+                leftButton.interactable = true;
+                rightButton.interactable = true;
+                attackButton.interactable = true;
+                diceButton.interactable = true;
+
+
+            }, error =>
+            {
+                conversationText.text = conversationText.text.TrimEnd("Bot is typing...\n".ToCharArray());
+                conversationText.text += $"\n<color=#{errorColorHex}>Error: {error}</color>\n\n";
+                inputField.interactable = true;
+                sendButton.interactable = true;
+                inputField.ActivateInputField();
+                isWaitingForResponse = false;
+                Canvas.ForceUpdateCanvases();
+                scrollRect.verticalNormalizedPosition = 0f;
+
+                upButton.interactable = true;
+                downButton.interactable = true;
+                leftButton.interactable = true;
+                rightButton.interactable = true;
+                attackButton.interactable = true;
+                diceButton.interactable = true;
+
+            });
+
+        }
+        //logic for the query sent when using the dice button
+        public void SendDiceQuery()
+        {
+            if (isWaitingForResponse) return;
+
+            //the user-entered text
+            string inputText = "I roll a " + randomValue + ".";
+
+            isWaitingForResponse = true;
+            inputField.interactable = false;
+            sendButton.interactable = false;
+            inputField.text = "";
+
+            upButton.interactable = false;
+            downButton.interactable = false;
+            leftButton.interactable = false;
+            rightButton.interactable = false;
+            attackButton.interactable = false;
+            diceButton.interactable = false;
+            attackButton.interactable = false;
+
+            conversationText.text += $"<color=#{userColorHex}>You: {inputText}</color>\n";
+            conversationText.text += "Bot is typing...\n";
+
+            Canvas.ForceUpdateCanvases();
+            scrollRect.verticalNormalizedPosition = 0f;
+
+
+            HuggingFaceAPI.TextGeneration(inputText, response =>
+            {
+                //string reply = response;
+                conversationText.text = conversationText.text.TrimEnd("Bot is typing...\n".ToCharArray());
+                conversationText.text += $"\n<color=#{botColorHex}>Bot: {response}</color>\n\n";
+                inputField.interactable = true;
+                sendButton.interactable = true;
+                inputField.ActivateInputField();
+                isWaitingForResponse = false;
+                Canvas.ForceUpdateCanvases();
+                scrollRect.verticalNormalizedPosition = 0f;
+
+                upButton.interactable = true;
+                downButton.interactable = true;
+                leftButton.interactable = true;
+                rightButton.interactable = true;
+                attackButton.interactable = true;
+                diceButton.interactable = true;
+
+
+            }, error =>
+            {
+                conversationText.text = conversationText.text.TrimEnd("Bot is typing...\n".ToCharArray());
+                conversationText.text += $"\n<color=#{errorColorHex}>Error: {error}</color>\n\n";
+                inputField.interactable = true;
+                sendButton.interactable = true;
+                inputField.ActivateInputField();
+                isWaitingForResponse = false;
+                Canvas.ForceUpdateCanvases();
+                scrollRect.verticalNormalizedPosition = 0f;
+
+                upButton.interactable = true;
+                downButton.interactable = true;
+                leftButton.interactable = true;
+                rightButton.interactable = true;
+                attackButton.interactable = true;
+                diceButton.interactable = true;
+
+            });
+
+        }
 
         private void ClearButtonClicked()
         {

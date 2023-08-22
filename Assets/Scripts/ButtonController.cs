@@ -12,6 +12,7 @@ public class ButtonController : MonoBehaviour
     public TMPro.TMP_InputField InputField;
 
 
+    public int GeneratedRandomNumber;
 
 
     private void Start()
@@ -36,11 +37,11 @@ public class ButtonController : MonoBehaviour
     //D20 generate random number Method from 1 to 20
     public void GenerateRandomNumber()
     {
-        int randomNumber = Random.Range(1, 21);
-        diceText.text = "Rolled: " + randomNumber;
+        GeneratedRandomNumber = Random.Range(1, 21);
+        diceText.text = "Rolled: " + GeneratedRandomNumber;
 
         //Append to text file on a new line
-        File.AppendAllText(filePath, "Dice Roll: " + randomNumber + "\n");
+        File.AppendAllText(filePath, "Dice Roll: " + GeneratedRandomNumber + "\n");
     }
 
 
